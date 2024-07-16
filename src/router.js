@@ -1,13 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import AppAboutUs from './pages/AppAboutUs.vue';
-import AppBlog from './pages/AppBlog.vue';
 import AppContact from './pages/AppContact.vue';
-import AppGetQuote from './pages/AppGetQuote.vue';
 import AppHome from './pages/AppHome.vue';
-import AppOurProcess from './pages/AppOurProcess.vue';
-import AppPortfolio from './pages/AppPortfolio.vue';
-import AppPricing from './pages/AppPricing.vue';
+
 
 
 const router = createRouter({
@@ -16,59 +12,26 @@ const router = createRouter({
         {
             path: '/'
             ,
-            name: 'aboutus'
-            ,
-            component: AppAboutUs
-        },
-        {
-            path: '/'
-            ,
-            name: 'blog'
-            ,
-            component: AppBlog
-        },
-        {
-            path: '/'
-            ,
-            name: 'contact'
-            ,
-            component: AppContact
-        },
-        {
-            path: '/'
-            ,
-            name: 'quote'
-            ,
-            component: AppGetQuote
-        },
-        {
-            path: '/'
-            ,
             name: 'home'
             ,
             component: AppHome
         },
         {
-            path: '/'
+            path: '/about'
             ,
-            name: 'process'
+            name: 'aboutus'
             ,
-            component: AppOurProcess
+            component: AppAboutUs
         },
         {
-            path: '/'
+            path: '/contact'
             ,
-            name: 'portfolio'
+            name: 'contactus'
             ,
-            component: AppPortfolio
+            component: AppContact
         },
-        {
-            path: '/'
-            ,
-            name: 'pricing'
-            ,
-            component: AppPricing
-        },
+
+
     ]
 });
 export { router };
