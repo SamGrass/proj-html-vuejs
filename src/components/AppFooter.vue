@@ -8,7 +8,7 @@ export default {
 <template>
     <footer>
         <!--  parte clients con carosello -->
-        <section>
+        <section class="ms_carousel">
             <div class="container text-center">
                 <div class="row">
                     <div class="col">
@@ -22,23 +22,24 @@ export default {
                 </div>
             </div>
         </section>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <!-- parte enter email -->
-                    <h3>We Create New Worlds! </h3>
-                    <h2>Want Tips On Your Storytelling? </h2>
-                    <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
-                    <form action="email">
-                        <input type="email" placeholder="Enter your email">
-                        <input type="submit" value="email">
-                    </form>
+        <!-- aggiungere onde -->
+        <!-- parte enter email -->
+        <section class="ms_newsletter">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">                       
+                        <h3>We Create New Worlds! </h3>
+                        <h2>Want Tips On Your Storytelling? </h2>
+                        <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
+                        <form action="email">
+                            <input type="email" placeholder="Enter your email">
+                            <a href="#!">Submit</a>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <section>
-
         </section>
+        <!-- aggiungere onde -->
         <!-- parte navfooter e socials -->
         <section class="ms_footer-socials">
             <div class="container">
@@ -55,7 +56,7 @@ export default {
                         </ul>
                     </div>
                 </div>
-                <div class="interline">linea</div>
+                <div class="ms_interline"></div>
                 <div class="row justify-content-between">
                     <div class="col">
                         ciao
@@ -78,5 +79,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
 
+    section {
+        padding: 2rem 0;
+    }
+
+    .ms_newsletter {
+        // debug
+        background-color: blue;
+    }
+    .ms_footer-socials {
+        padding: 2rem 0 1rem;
+
+        .ms_interline {
+            width: 100%;
+            height: 1px;
+            background-color: $grey;
+            margin-bottom: 1rem;
+        }
+        
+    }
 </style>
