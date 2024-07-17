@@ -3,22 +3,22 @@ import { reactive } from "vue";
 export const store = reactive({
     sponsorList: [
         {
-            imageUrl: '/public/sponsor1.png',
+            imageUrl: '/sponsor1.png',
         },
         {
-            imageUrl: '/public/sponsor2.png',
+            imageUrl: '/sponsor2.png',
         },
         {
-            imageUrl: '/public/sponsor3.png',
+            imageUrl: '/sponsor3.png',
         },
         {
-            imageUrl: '/public/sponsor4.png',
+            imageUrl: '/sponsor4.png',
         },
         {
-            imageUrl: '/public/sponsor5.png',
+            imageUrl: '/sponsor5.png',
         },
         {
-            imageUrl: '/public/sponsor6.png',
+            imageUrl: '/sponsor6.png',
         }
     ]
 })
