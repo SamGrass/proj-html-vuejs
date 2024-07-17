@@ -75,8 +75,6 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .smart-section {
-    position: relative;
-
     .container {
         position: relative;
         z-index: 2;
