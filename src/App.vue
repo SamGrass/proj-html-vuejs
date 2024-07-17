@@ -30,4 +30,32 @@ h5,
 h6 {
   font-family: "Chakra Petch", sans-serif;
 }
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3,
+h4 {
+  font-weight: 500;
+}
+
+main {
+  color: $primary;
+  text-align: center;
+
+  section {
+    padding: 7.5rem 0;
+
+    h2 {
+      font-size: 3.625rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: $blue;
+    }
+  }
+}
 </style>
