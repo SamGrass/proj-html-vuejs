@@ -12,19 +12,19 @@ export default {
         return {
             smartCards: [
                 {
-                    image: '../../public/smart1.png',
+                    image: 'smart1.png',
                     link: '#',
                     title: '3D modeling',
                     paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
                 },
                 {
-                    image: '../../public/smart2.png',
+                    image: 'smart2.png',
                     link: '#',
                     title: 'Collaboration',
                     paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
                 },
                 {
-                    image: '../../public/smart3.png',
+                    image: 'smart3.png',
                     link: '#',
                     title: 'Creativity',
                     paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
@@ -38,7 +38,7 @@ export default {
 <template>
     <section class="smart-section">
         <div class="container">
-            <div class="row">
+            <div class="row section-header">
                 <div class="col-6 offset-3">
                     <h3>
                         Our Love For Animation
@@ -54,19 +54,25 @@ export default {
                     </p>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-9 offset-3">
                     <ul class="row smart-cards-container">
                         <li class="col-4" v-for="card in smartCards">
-                            <SmartCard :imagePath="card.image" :titleURL="card.link" :titleText="card.title"
+                            <SmartCard :imagePath="'../../' + card.image" :titleURL="card.link" :titleText="card.title"
                                 :paragraphText="card.paragraph" />
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="smart-mascotte">
-            <img src="../../public/smart.png" alt="Smart Mascotte">
+            <img src="../../smart.png" alt="Smart Mascotte">
+        </div>
+
+        <div class="rocket">
+            <img src="../../smart4.png" alt="Rocket">
         </div>
     </section>
 </template>
@@ -75,13 +81,13 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .smart-section {
-    position: relative;
-
     .container {
         position: relative;
         z-index: 2;
 
         .smart-cards-container {
+            margin-top: 3.125rem;
+
             li:nth-child(2)>.smart-card {
                 background-color: #edeafb;
                 background-image: linear-gradient(180deg, #ffffff, #edeafb);
@@ -108,10 +114,18 @@ export default {
         left: 0;
         z-index: 1;
         height: 100%;
+    }
 
-        img {
-            height: 100%;
-        }
+    .rocket {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        height: 8.75rem;
+    }
+
+    img {
+        height: 100%;
     }
 }
 </style>

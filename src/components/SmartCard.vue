@@ -40,12 +40,12 @@ export default {
     border: 1px solid #b2b5d2;
     background-color: #fff1e8;
     background-image: linear-gradient(180deg, #ffffff, #fff1e8);
-    box-shadow: 0 .5rem 1.125rem 0 #dad8e0;
+    box-shadow: 0 .5rem 1.125rem 0 #eaeaee;
     transition: all .3s;
 
     &:hover {
+        border-color: #ffffff;
         background-image: linear-gradient(0deg, #ffffff, #fff1e8);
-
     }
 
     .thumbnail {

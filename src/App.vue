@@ -47,6 +47,11 @@ main {
 
   section {
     padding: 7.5rem 0;
+    position: relative;
+
+    .section-header {
+      margin-bottom: 3.125rem;
+    }
 
     h2 {
       font-size: 3.625rem;
