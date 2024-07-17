@@ -1,6 +1,10 @@
 <script>
+import AppFooterCarousel from './AppFooterCarousel.vue'
 export default {
     name: 'AppFooter',
+    components: {
+        AppFooterCarousel
+    }
 
 }
 </script>
@@ -17,6 +21,7 @@ export default {
                         <p>We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned global brands. </p>
                         <div>
                             <!-- parte di carosello -->
+                            <AppFooterCarousel/>
                         </div>
                     </div>
                 </div>
