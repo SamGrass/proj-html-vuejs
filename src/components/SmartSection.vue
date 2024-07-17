@@ -54,6 +54,7 @@ export default {
                     </p>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-9 offset-3">
                     <ul class="row smart-cards-container">
@@ -65,8 +66,12 @@ export default {
                 </div>
             </div>
         </div>
+
         <div class="smart-mascotte">
-            <img src="../../public/smart.png" alt="Smart Mascotte">
+        </div>
+
+        <div class="rocket">
+            <img src="../../smart4.png" alt="Rocket">
         </div>
     </section>
 </template>
@@ -80,6 +85,8 @@ export default {
         z-index: 2;
 
         .smart-cards-container {
+            margin-top: 3.125rem;
+
             li:nth-child(2)>.smart-card {
                 background-color: #edeafb;
                 background-image: linear-gradient(180deg, #ffffff, #edeafb);
@@ -106,10 +113,18 @@ export default {
         left: 0;
         z-index: 1;
         height: 100%;
+    }
+
+    .rocket {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        height: 8.75rem;
+    }
 
         img {
             height: 100%;
-        }
     }
 }
 </style>
