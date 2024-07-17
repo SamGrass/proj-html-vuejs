@@ -86,8 +86,6 @@ export default {
         z-index: 2;
 
         .smart-cards-container {
-            margin-top: 3.125rem;
-
             li:nth-child(2)>.smart-card {
                 background-color: #edeafb;
                 background-image: linear-gradient(180deg, #ffffff, #edeafb);
