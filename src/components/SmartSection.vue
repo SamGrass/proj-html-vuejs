@@ -12,19 +12,19 @@ export default {
         return {
             smartCards: [
                 {
-                    image: '../../public/smart1.png',
+                    image: 'smart1.png',
                     link: '#',
                     title: '3D modeling',
                     paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
                 },
                 {
-                    image: '../../public/smart2.png',
+                    image: 'smart2.png',
                     link: '#',
                     title: 'Collaboration',
                     paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
                 },
                 {
-                    image: '../../public/smart3.png',
+                    image: 'smart3.png',
                     link: '#',
                     title: 'Creativity',
                     paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
@@ -59,7 +59,7 @@ export default {
                 <div class="col-9 offset-3">
                     <ul class="row smart-cards-container">
                         <li class="col-4" v-for="card in smartCards">
-                            <SmartCard :imagePath="card.image" :titleURL="card.link" :titleText="card.title"
+                            <SmartCard :imagePath="'../../' + card.image" :titleURL="card.link" :titleText="card.title"
                                 :paragraphText="card.paragraph" />
                         </li>
                     </ul>
@@ -68,6 +68,7 @@ export default {
         </div>
 
         <div class="smart-mascotte">
+            <img src="../../smart.png" alt="Smart Mascotte">
         </div>
 
         <div class="rocket">
@@ -123,8 +124,8 @@ export default {
         height: 8.75rem;
     }
 
-        img {
-            height: 100%;
+    img {
+        height: 100%;
     }
 }
 </style>
