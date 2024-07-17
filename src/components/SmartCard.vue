@@ -40,6 +40,7 @@ export default {
     border: 1px solid #b2b5d2;
     background: linear-gradient(180deg, #ffffff, #fff1e8), #fff1e8;
     box-shadow: 0 .5rem 1.125 0 #f6f3ff9c;
+    transition: all .3s;
 
     &:hover {
         border-color: #ffffff;
