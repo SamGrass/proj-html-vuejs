@@ -54,26 +54,27 @@ export default {
                     <div class="col">
                         <img src="/footer-logo.png" alt="">
                     </div>
-                    <div class="col">
-                        <ul class="d-flex justify-content-end">
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
+                    <nav class="col">
+                        <ul class="d-flex justify-content-end ms_links">
+                            <!-- COLLEGARE POI AL ROUTER -->
+                            <li><a href="#!">Home</a></li>
+                            <li><a href="#!">About Us</a></li>
+                            <li><a href="#!">Contacts</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
                 <div class="ms_interline"></div>
                 <div class="row justify-content-between">
                     <div class="col">
-                        ciao
+                        Copyright © 2022 <a class="ms_softivus" href="https://www.templatemonster.com/authors/softivus/">Softivus.</a> All rights reserved. 
                     </div>
                     <div class="col">
-                        <ul class="d-flex justify-content-end">
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
+                        <ul class="d-flex justify-content-end ms_links">
+                            <!-- COLLEGARE AI SITI -->
+                            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -142,6 +143,27 @@ export default {
             background-color: $grey;
             margin-bottom: 1rem;
         }
+        
+        .ms_softivus {
+            color: $blue;
+        }
+
+        .ms_links {
+            gap: 1rem;
+
+            .ms_btn-socials {        
+                border-radius: 50%;
+                padding: 0.3em;
+                border: 1px solid $grey;
+
+                i {
+                    width: 1.3rem;
+                    text-align: center;
+                    color: $blue;
+                }
+            }
+        }
+        
         
     }
 </style>
