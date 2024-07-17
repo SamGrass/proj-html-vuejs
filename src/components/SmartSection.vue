@@ -38,7 +38,7 @@ export default {
 <template>
     <section class="smart-section">
         <div class="container">
-            <div class="row">
+            <div class="row section-header">
                 <div class="col-6 offset-3">
                     <h3>
                         Our Love For Animation
