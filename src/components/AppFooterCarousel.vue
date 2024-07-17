@@ -11,26 +11,34 @@ export default {
 </script>
 
 <template>
-    <div class="card-container">
-        <div class="card" v-for="(sponsor, index) in store.sponsorList" :key="index">
-            <img :src="sponsor.imageUrl" alt="">
+    <div class="ms_carousel-container">
+        <div class="ms_carousel-hidden">
+            <div class="ms_card" v-for="(sponsor, index) in store.sponsorList" :key="index">
+                <img :src="sponsor.imageUrl" alt="">
+            </div>
+            
         </div>
+        
     </div>
     
 </template>
 
 <style lang="scss" scoped>
 
-    .card-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-
-        .card {
-            width: calc(100% / 6 - 1rem);
+    .ms_carousel-container {
+        overflow: hidden;
         
+        .ms_carousel-hidden {
+            display: flex;
+            justify-content: space-between;
 
+            .ms_card {
+                width: calc(100% / 6);
+                margin-right: 1rem;
+
+            }
         }
+        
     }
     
 </style>
