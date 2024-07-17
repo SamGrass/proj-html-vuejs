@@ -38,13 +38,12 @@ export default {
     border-radius: $rad-xl;
     padding: 2.25rem 1rem;
     border: 1px solid #b2b5d2;
-    background: linear-gradient(180deg, #ffffff, #fff1e8), #fff1e8;
-    box-shadow: 0 .5rem 1.125 0 #f6f3ff9c;
+    background-color: #fff1e8;
+    background-image: linear-gradient(180deg, #ffffff, #fff1e8);
     transition: all .3s;
 
     &:hover {
-        border-color: #ffffff;
-        background: linear-gradient(0deg, #ffffff, #fff1e8), #fff1e8;
+        background-image: linear-gradient(0deg, #ffffff, #fff1e8);
 
     }
 

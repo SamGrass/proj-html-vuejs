@@ -83,18 +83,20 @@ export default {
 
         .smart-cards-container {
             li:nth-child(2)>.smart-card {
-                background: linear-gradient(180deg, #ffffff, #edeafb), #edeafb;
+                background-color: #edeafb;
+                background-image: linear-gradient(180deg, #ffffff, #edeafb);
 
                 &:hover {
-                    background: linear-gradient(0deg, #ffffff, #edeafb), #edeafb;
+                    background-image: linear-gradient(0deg, #ffffff, #edeafb);
                 }
             }
 
             li:nth-child(3)>.smart-card {
-                background: linear-gradient(180deg, #ffffff, #ffe5e7), #ffe5e7;
+                background-color: #ffe5e7;
+                background-image: linear-gradient(180deg, #ffffff, #ffe5e7);
 
                 &:hover {
-                    background: linear-gradient(0deg, #ffffff, #ffe5e7), #ffe5e7;
+                    background-image: linear-gradient(0deg, #ffffff, #ffe5e7);
                 }
             }
         }
