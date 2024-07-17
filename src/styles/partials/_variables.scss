@@ -13,3 +13,15 @@ $rad-s: .625rem;
 $rad-m: 1.25rem;
 $rad-l: 1.875rem;
 $rad-xl: 2.5rem;
+
+// Regole Basi per bottoni 
+
+.button{
+    width: 10rem;
+    height: 3rem; 
+    border-radius: 2rem;
+    background-color: $rose;
+    color: black;
+    text-align: center;
+    padding-top: 9px;
+}
