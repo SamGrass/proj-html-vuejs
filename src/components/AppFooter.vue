@@ -1,10 +1,17 @@
 <script>
 import AppFooterCarousel from './AppFooterCarousel.vue'
+import { router } from '../router.js'
+
 export default {
     name: 'AppFooter',
     components: {
         AppFooterCarousel
-    }
+    },
+    data() {
+        return {
+            router
+        }
+    },
 
 }
 </script>
@@ -61,14 +68,8 @@ export default {
                     <nav class="col">
                         <ul class="d-flex justify-content-end ms_links ms_link-router">
                             <!-- COLLEGARE POI AL ROUTER -->
-                            <li>
-                                <router-link :to="{ name: 'Home' }">Home</router-link>
-                            </li>
-                            <li>
-                                <router-link :to="{ name: 'About Us' }">About Us</router-link>
-                            </li>
-                            <li>
-                                <router-link :to="{ name: 'Contact Us' }">Contact Us</router-link>
+                            <li v-for="(item, index) in router.getRoutes()" :key="index">
+                                <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
                             </li>
                         </ul>
                     </nav>

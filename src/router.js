@@ -10,24 +10,18 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/'
-            ,
-            name: 'Home'
-            ,
+            path: '/',
+            name: 'Home',
             component: AppHome
         },
         {
-            path: '/about'
-            ,
-            name: 'About Us'
-            ,
+            path: '/about',
+            name: 'About Us',
             component: AppAboutUs
         },
         {
-            path: '/contact'
-            ,
-            name: 'Contact Us'
-            ,
+            path: '/contact',
+            name: 'Contact Us',
             component: AppContact
         },
 

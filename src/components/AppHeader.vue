@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted() {
-        console.log(router);
+        console.log(router.getRoutes());
     },
     
 }
@@ -37,17 +37,8 @@ export default {
             <img src="/public/logo.png" alt="">
             <div>
                 <ul class="ms_link-router">
-                    <!-- <li v-for="(item, index) in router" :key="index">
+                    <li v-for="(item, index) in router.getRoutes()" :key="index">
                         <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
-                    </li> -->
-                    <li>
-                        <router-link :to="{ name: 'Home' }">Home</router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'About Us' }">About Us</router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'Contact Us' }">Contact Us</router-link>
                     </li>
                 </ul>
                 
