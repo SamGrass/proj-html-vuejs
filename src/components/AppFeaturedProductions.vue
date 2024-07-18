@@ -30,22 +30,22 @@ export default {
 
         <div class="card_featured_productions">
             <img src="/public/work1.png" alt="">
-            <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-play"></i>
         </div>
 
         <div class="card_featured_productions">
             <img src="/public/work2.png" alt="">
-            <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-play"></i>
         </div>
 
         <div class="card_featured_productions">
             <img src="/public/work3.png" alt="">
-            <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-play"></i>
         </div>
 
         <div class="card_featured_productions">
             <img src="/public/work4.png" alt="">
-            <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-play"></i>
         </div>
     </div>
 
@@ -75,31 +75,18 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    // prove per l'effetto hover 
-    &:hover{
-        width: calc((100% / 2) - 40px);
-        color: $blue;
-    }
     // debug
     // background-color: $primary;
     // border: 2px white solid;
 }
+
+// Transiozione della card in diagonale all'Hover 
 
 .card_featured_productions img:hover{
     width: 100%;
     z-index: 900;
     transform: skewX(3deg);
     transition: 0.3s;
-}
-
-.button.alternative{
-    color: black;
-    margin: 1.5rem 0 7rem;
-
-    &:hover{
-        cursor: pointer;
-    }
 }
 
 i{
@@ -110,18 +97,24 @@ i{
     text-align: center;
     background-color: $white;
     position: absolute;  
-    display: none;
-
-    &:hover{
-    z-index: 900;
     display: flex;
     justify-content: center;
     align-items:center ;
-    }
 }
 
 .fa-play{
     font-size: 1.2rem;
     color: $orange;
 }
+
+// bottone sottostante alle card 
+.button.alternative{
+    color: black;
+    margin: 1.5rem 0 7rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 </style>
