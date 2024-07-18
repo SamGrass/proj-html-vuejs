@@ -67,6 +67,9 @@ h5{
     margin-top: 2rem;
     margin-bottom: 2rem;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     // debug
     // background-color: $orange;
 }
@@ -114,8 +117,6 @@ h5{
     background-color:#a616ea;
     padding: 10px;
     position: absolute;
-    top: 15rem;
-    left: 29rem;
 }
 
 
