@@ -1,15 +1,12 @@
 <script>
 import { router } from '../router.js'
-import Jumbotron from './Jumbotron.vue';
-import AppFeaturedProductions from './AppFeaturedProductions.vue'
-import SmartSection from './SmartSection.vue'
+import JumbotronAboutUs from './JumbotronAboutUs.vue'
+
 
 export default {
     name: 'AppHeader',
     components:{
-        Jumbotron,
-        AppFeaturedProductions,
-        SmartSection,
+        JumbotronAboutUs,
     },
     data() {
         return {
@@ -50,7 +47,9 @@ export default {
             <a class="button" href="#">Get a Quote</a>
         </nav>
 
-        <Jumbotron />
+        <JumbotronAboutUs />
+
+
 
 
         <!-- ondina a fine header  -->

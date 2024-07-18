@@ -111,14 +111,9 @@ i {
     text-align: center;
     background-color: $white;
     position: absolute;
-    display: none;
-
-    &:hover {
-        z-index: 900;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fa-play {
