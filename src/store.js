@@ -74,5 +74,27 @@ export const store = reactive({
             title: 'Script writing',
             paragraph: 'The best in the business, served to your audience’s eyeballs.'
         },
+    ],
+    processList: [
+        {
+            image: '/process1.png',
+            title: 'Scripting',
+            paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        },
+        {
+            image: '/process2.png',
+            title: 'Pre-Production',
+            paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        },
+        // {
+        //     image: '/process1.png',
+        //     title: 'Scripting',
+        //     paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        // },
+        // {
+        //     image: '/process2.png',
+        //     title: 'Pre-Production',
+        //     paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        // },
     ]
 })
