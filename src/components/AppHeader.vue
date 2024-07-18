@@ -1,12 +1,20 @@
 <script>
-
+import { router } from '../router.js'
 import Jumbotron from './Jumbotron.vue';
 
 export default {
     name: 'AppHeader',
     components:{
         Jumbotron,
-    }
+    },
+    data() {
+        return {
+            router
+        }
+    },
+    mounted() {
+        console.log(router);
+    },
     
 }
 </script>
@@ -29,9 +37,18 @@ export default {
             <img src="/public/logo.png" alt="">
             <div>
                 <ul>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contacs</li>
+                    <!-- <li v-for="(item, index) in router" :key="index">
+                        <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+                    </li> -->
+                    <li>
+                        <router-link :to="{ name: 'Home' }">Home</router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'About Us' }">About Us</router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'Contact Us' }">Contact Us</router-link>
+                    </li>
                 </ul>
                 
             </div>

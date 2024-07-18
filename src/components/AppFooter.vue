@@ -152,8 +152,7 @@ export default {
                 top: 10%;
                 right: 1%;  
             }
-        }
-        
+        }    
     }
 
     
@@ -185,8 +184,6 @@ export default {
                     color: $blue;
                 }
             }
-        }
-        
-        
+        }       
     }
 </style>
