@@ -48,9 +48,7 @@ export default {
                     </h2>
                     <p>
                         Our culture inspires the creative and innovative spirit found throughout our Studio. We breathe
-                        life
-                        into
-                        new ideas!
+                        life into new ideas!
                     </p>
                 </div>
             </div>
@@ -59,7 +57,7 @@ export default {
                 <div class="col-9 offset-3">
                     <ul class="row smart-cards-container">
                         <li class="col-4" v-for="card in smartCards">
-                            <SmartCard :imagePath="'../../' + card.image" :titleURL="card.link" :titleText="card.title"
+                            <SmartCard :imagePath="'/' + card.image" :titleURL="card.link" :titleText="card.title"
                                 :paragraphText="card.paragraph" />
                         </li>
                     </ul>
@@ -68,11 +66,11 @@ export default {
         </div>
 
         <div class="smart-mascotte">
-            <img src="../../smart.png" alt="Smart Mascotte">
+            <img src="/smart.png" alt="Smart Mascotte">
         </div>
 
         <div class="rocket">
-            <img src="../../smart4.png" alt="Rocket">
+            <img src="/smart4.png" alt="Rocket">
         </div>
     </section>
 </template>
