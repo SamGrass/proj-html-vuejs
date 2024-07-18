@@ -43,3 +43,9 @@ body {
     text-align: center;
     padding-top: 9px;
 }
+
+// Bacground elements
+.backgroung-element {
+    pointer-events: none;
+    user-select: none;
+}
