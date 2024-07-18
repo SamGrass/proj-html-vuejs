@@ -3,6 +3,7 @@ import TeamSection from '../components/TeamSection.vue';
 import SmartSection from '../components/SmartSection.vue';
 import FactsSection from '../components/FactsSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
+import AppFeaturedProductions from '../components/AppFeaturedProductions.vue'
 
 export default {
     name: 'AppHome',
@@ -10,7 +11,8 @@ export default {
         TeamSection,
         SmartSection,
         FactsSection,
-        ProcessSection
+        ProcessSection,
+        AppFeaturedProductions
     }
 
 }
@@ -20,7 +22,7 @@ export default {
     <main>
         <SmartSection/>
         <FactsSection/>
-        <!-- AGGIUNGERE COMPONENTE OUR WORKS -->
+        <AppFeaturedProductions/>
         <ProcessSection/>   
         <TeamSection/>
     </main>

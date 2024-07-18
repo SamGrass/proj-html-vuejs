@@ -59,10 +59,6 @@ export default {
         </div>
     </header>
 
-    <AppFeaturedProductions/>
-
-    <SmartSection />
-
 </template>
 
 
