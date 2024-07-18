@@ -48,7 +48,7 @@ export default {
             </ul>
         </div>
 
-        <div class="background-planet">
+        <div class="planet background-element">
             <img src="/globe.png" alt="">
         </div>
     </section>
@@ -92,7 +92,7 @@ export default {
         background-position: bottom;
     }
 
-    .background-planet {
+    .planet {
         position: absolute;
         z-index: 1;
         top: 50%;

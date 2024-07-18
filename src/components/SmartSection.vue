@@ -65,11 +65,11 @@ export default {
             </div>
         </div>
 
-        <div class="smart-mascotte">
+        <div class="smart-mascotte background-element">
             <img src="/smart.png" alt="Smart Mascotte">
         </div>
 
-        <div class="rocket">
+        <div class="rocket background-element">
             <img src="/smart4.png" alt="Rocket">
         </div>
     </section>
