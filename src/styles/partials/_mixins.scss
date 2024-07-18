@@ -42,24 +42,26 @@
     }
 }
 
+@mixin shape-config() {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
 @mixin top-shape($imagePath: '') {
     & {
         position: relative;
     }
 
     &::before {
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-
-    &::before {
+        @include shape-config();
         background-image: url($imagePath);
         background-position: top;
     }
@@ -71,19 +73,8 @@
     }
 
     &::after {
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-
-    &::after {
+        @include shape-config();
         background-image: url($imagePath);
         background-position: bottom;
     }
-} 
+}
