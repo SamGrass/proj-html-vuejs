@@ -1,12 +1,10 @@
 <script>
 import { router } from '../router.js'
-import JumbotronAboutUs from './JumbotronAboutUs.vue'
 
 
 export default {
     name: 'AppHeader',
     components:{
-        JumbotronAboutUs,
     },
     data() {
         return {
@@ -47,7 +45,7 @@ export default {
             <a class="button" href="#">Get a Quote</a>
         </nav>
 
-        <JumbotronAboutUs />
+        <JumbotronContacts />
 
 
 
