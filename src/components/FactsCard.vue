@@ -45,6 +45,11 @@ export default {
     padding: 2.75rem 1.25rem;
     border-radius: $rad-m;
     border: 1px solid $grey;
+    transition: all $trns-stnd;
+
+    &:hover {
+        transform: skew(0, 4deg);
+    }
 
     .counter {
         font-size: 3.625rem;
