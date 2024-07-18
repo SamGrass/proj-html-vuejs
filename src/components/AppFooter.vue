@@ -13,30 +13,34 @@ export default {
     <footer>
         <!--  parte clients con carosello -->
         <section class="ms_carousel">
-            <div class="container text-center">
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h3>Why Anidio studio?</h3>
-                        <h2>We Love Our Clients </h2>
-                        <p>We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned global brands. </p>
+                        <div class="section-header">
+                            <h3>Why Anidio studio?</h3>
+                            <h2>We Love Our Clients </h2>
+                            <p>We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned global brands. </p>
+                        </div>
                         <div>
                             <!-- parte di carosello -->
-                            <AppFooterCarousel/>
+                            <AppFooterCarousel />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- parte newsletter -->
-        <section class="ms_newsletter">
+        <section class="ms_newsletter vertical-shapes crack-section">
             <!-- aggiungere onde con css-->
-            <div class="container text-center">
+            <div class="container">
                 <div class="row">
-                    <div class="col-6 offset-3 ms_text-newsletter">                       
-                        <h3>We Create New Worlds! </h3>
-                        <h2>Want Tips On Your Storytelling? </h2>
-                        <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
+                    <div class="col-6 offset-3 ms_text-newsletter">
+                        <div class="section-header">
+                            <h3>We Create New Worlds! </h3>
+                            <h2>Want Tips On Your Storytelling? </h2>
+                            <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
+                        </div>
                         <form action="email">
                             <input type="email" class="ms_email-text" placeholder="Enter your email">
                             <a class="button" href="#!">Submit</a>
@@ -46,9 +50,9 @@ export default {
             </div>
             <!-- aggiungere onde con css -->
         </section>
-        
+
         <!-- parte navfooter e socials -->
-        <section class="ms_footer-socials">
+        <section class="ms_footer-socials text-start">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col">
@@ -66,7 +70,7 @@ export default {
                 <div class="ms_interline"></div>
                 <div class="row justify-content-between">
                     <div class="col">
-                        Copyright © 2022 <a class="ms_softivus" href="https://www.templatemonster.com/authors/softivus/">Softivus.</a> All rights reserved. 
+                        Copyright © 2022 <a class="ms_softivus" href="https://www.templatemonster.com/authors/softivus/">Softivus.</a> All rights reserved.
                     </div>
                     <div class="col">
                         <ul class="d-flex justify-content-end ms_links">
@@ -74,14 +78,13 @@ export default {
                             <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
                             <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
                             <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-instagram"></i></a></li>
-                            
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
     </footer>
-    
+
 
 
 </template>
@@ -90,94 +93,53 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
-
-    
-    .ms_carousel {
-        padding: 3rem 0;
-    }
-
-    .ms_newsletter {
+.ms_newsletter {
+    .container {
         position: relative;
-        padding: 5rem 0;
-        background-image: url(counter-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #ffffff;
-        overflow: hidden;
+        z-index: 3;
+    }
 
-        .container {
-            position: relative;
-            z-index: 3;
+    form {
+        display: flex;
+        position: relative;
+
+        .ms_email-text {
+            width: 100%;
+            border-radius: 2em;
+            height: 3.5rem;
+            padding: 0 11rem 0 1rem;
+            border: none;
         }
 
-        &::before,
-        &::after {
-            content: '';
-            background-repeat: no-repeat;
-            background-size: 100% auto;
+        .button {
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
+            top: 10%;
+            right: 1%;
         }
+    }
+}
 
-        &::before {
-            background-image: url(/shape-top.png);
-            background-position: top;
-        }
 
-        &::after {
-            background-image: url(/shape-bottom.png);
-            background-position: bottom;
-        }
+.ms_footer-socials {
+    padding: 2rem 0 1rem;
 
-        h3 {
-            color: $orange;
-        }
-
-        form {
-            display: flex;
-            position: relative;
-
-            .ms_email-text {
-                width: 100%;
-                border-radius: 2em;
-                height: 3.5rem;
-                padding: 0 11rem 0 1rem;
-                border: none;
-            }
-
-            .button {
-                position: absolute;
-                top: 10%;
-                right: 1%;  
-            }
-        }    
+    .ms_interline {
+        width: 100%;
+        height: 1px;
+        background-color: $grey;
+        margin-bottom: 1rem;
     }
 
-    
-    .ms_footer-socials {
-        padding: 2rem 0 1rem;
-
-        .ms_interline {
-            width: 100%;
-            height: 1px;
-            background-color: $grey;
-            margin-bottom: 1rem;
-        }
-        
-        .ms_softivus {
-            color: $blue;
-        }
-
-        .ms_links {
-            gap: 1rem;
-
-            .ms_btn-socials {
-                @include social-btn;  
-            }
-        }       
+    .ms_softivus {
+        color: $blue;
     }
+
+    .ms_links {
+        gap: 1rem;
+
+        .ms_btn-socials {
+            @include social-btn;
+        }
+    }
+}
 </style>

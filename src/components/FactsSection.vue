@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-    <section class="facts-section vertical-shapes">
+    <section class="facts-section vertical-shapes crack-section">
         <div class="container">
             <h2 class="section-header">
                 Anidio Quick Facts
@@ -59,10 +59,6 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 .facts-section {
-    background-image: url(/counter-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: $white;
     overflow: hidden;
 
     .container {

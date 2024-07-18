@@ -41,26 +41,23 @@ h4 {
   font-weight: 500;
 }
 
-main {
+section {
+  padding: 7.5rem 0;
+  position: relative;
   color: $primary;
   text-align: center;
 
-  section {
-    padding: 7.5rem 0;
-    position: relative;
+  .section-header {
+    margin-bottom: 3.125rem;
+  }
 
-    .section-header {
-      margin-bottom: 3.125rem;
-    }
+  h2 {
+    font-size: 3.625rem;
+  }
 
-    h2 {
-      font-size: 3.625rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      color: $blue;
-    }
+  h3 {
+    font-size: 1.5rem;
+    color: $blue;
   }
 }
 </style>
