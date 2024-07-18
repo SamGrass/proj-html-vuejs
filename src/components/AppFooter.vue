@@ -59,11 +59,17 @@ export default {
                         <img src="/footer-logo.png" alt="">
                     </div>
                     <nav class="col">
-                        <ul class="d-flex justify-content-end ms_links">
+                        <ul class="d-flex justify-content-end ms_links ms_link-router">
                             <!-- COLLEGARE POI AL ROUTER -->
-                            <li><a href="#!">Home</a></li>
-                            <li><a href="#!">About Us</a></li>
-                            <li><a href="#!">Contacts</a></li>
+                            <li>
+                                <router-link :to="{ name: 'Home' }">Home</router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{ name: 'About Us' }">About Us</router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{ name: 'Contact Us' }">Contact Us</router-link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -136,6 +142,13 @@ export default {
 
     .ms_links {
         gap: 1rem;
+        
+        .ms_link-router, li {
+            &:hover {
+                color: $blue
+            }
+        }
+        
 
         .ms_btn-socials {
             @include social-btn;
