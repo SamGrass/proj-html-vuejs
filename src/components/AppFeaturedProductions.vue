@@ -65,31 +65,28 @@ h3 {
 }
 
 .card_featured_productions {
-    width: calc((100% / 2) - 40px);
+    width: calc((100% / 2) - 20px);
     border-radius: $rad-xl;
-    margin: 20px;
+    margin: 10px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    // prove per l'effetto hover 
     &:hover {
-        width: calc((100% / 2) - 40px);
-        color: $blue;
-    }
-
-    // debug
-    // background-color: $primary;
-    // border: 2px white solid;
-}
-
-.card_featured_productions img:hover {
-    width: 100%;
+    // width: 100%;
     z-index: 900;
     transform: skewX(3deg);
     transition: 0.3s;
+    }
 }
+
+// .card_featured_productions img:hover {
+//     width: 100%;
+//     z-index: 900;
+//     transform: skewX(3deg);
+//     transition: 0.3s;
+// }
 
 .button.alternative {
     color: black;
@@ -122,4 +119,15 @@ i {
     font-size: 1.2rem;
     color: $orange;
 }
+
+// bottone sottostante alle card 
+.button.alternative{
+    color: black;
+    margin: 1.5rem 0 7rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 </style>

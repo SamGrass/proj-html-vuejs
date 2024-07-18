@@ -1,11 +1,15 @@
 <script>
 import { router } from '../router.js'
 import Jumbotron from './Jumbotron.vue';
+import AppFeaturedProductions from './AppFeaturedProductions.vue'
+import SmartSection from './SmartSection.vue'
 
 export default {
     name: 'AppHeader',
     components:{
         Jumbotron,
+        AppFeaturedProductions,
+        SmartSection,
     },
     data() {
         return {
@@ -55,6 +59,10 @@ export default {
         </div>
     </header>
 
+    <AppFeaturedProductions/>
+
+    <SmartSection />
+
 </template>
 
 
@@ -92,11 +100,11 @@ ul{
 
 li{
     margin: 0 1rem;
-}
 
-li:hover{
+    &:hover{
     color: $orange;
     cursor: pointer;
+    }
 }
 
 // regole dei pianeti in background 
