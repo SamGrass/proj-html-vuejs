@@ -10,49 +10,55 @@ export default {
 <template>
 
     <!-- contenuto Our Works  -->
+    <section>
+        <div class="container">
 
-    <div class="row">
+                
+            <div class="row">
 
-        <!-- titolo , sottotitolo e paragrafo  -->
+                <!-- titolo , sottotitolo e paragrafo  -->
 
-        <div class="col-6 offset-3 text-center">
-            <h3> Our Works </h3>
-            <h2> Featured Productions </h2>
-            <p> Here's just a small sample of some of those projects that we're quite proud of. If you're looking for something specific feel free to get in contact with us. </p>
+                <div class="col-6 offset-3 text-center">
+                    <h3> Our Works </h3>
+                    <h2> Featured Productions </h2>
+                    <p> Here's just a small sample of some of those projects that we're quite proud of. If you're looking for something specific feel free to get in contact with us. </p>
+                </div>
+
+                <!-- 4 cards con effetto hover inclunato  -->
+
+                <div class="offset-1 col-10 offset-1 d-flex flex-wrap">
+
+                    <div class="card_featured_productions">
+                        <img src="/public/work1.png" alt="">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+
+                    <div class="card_featured_productions">
+                        <img src="/public/work2.png" alt="">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+
+                    <div class="card_featured_productions">
+                        <img src="/public/work3.png" alt="">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+
+                    <div class="card_featured_productions">
+                        <img src="/public/work4.png" alt="">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+
+                <!-- bottone See Our Work  -->
+                <div class="col-12 d-flex justify-content-center jus text-center">
+                    <a class="button alternative">
+                        See Our Work
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <!-- 4 cards con effetto hover inclunato  -->
-
-        <div class="offset-1 col-10 offset-1 d-flex flex-wrap">
-
-            <div class="card_featured_productions">
-                <img src="/public/work1.png" alt="">
-                <i class="fa-solid fa-play"></i>
-            </div>
-
-            <div class="card_featured_productions">
-                <img src="/public/work2.png" alt="">
-                <i class="fa-solid fa-play"></i>
-            </div>
-
-            <div class="card_featured_productions">
-                <img src="/public/work3.png" alt="">
-                <i class="fa-solid fa-play"></i>
-            </div>
-
-            <div class="card_featured_productions">
-                <img src="/public/work4.png" alt="">
-                <i class="fa-solid fa-play"></i>
-            </div>
-        </div>
-
-        <!-- bottone See Our Work  -->
-        <div class="col-12 d-flex justify-content-center jus text-center">
-            <a class="button alternative">
-                See Our Work
-            </a>
-        </div>
-    </div>
+    </section>
+    
 
 </template>
 
