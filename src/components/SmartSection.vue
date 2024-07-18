@@ -15,19 +15,19 @@ export default {
                     image: 'smart1.png',
                     link: '#',
                     title: '3D modeling',
-                    paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
+                    paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we\'ll drill deep to deliver above and beyond your expectations.'
                 },
                 {
                     image: 'smart2.png',
                     link: '#',
                     title: 'Collaboration',
-                    paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
+                    paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we\'ll drill deep to deliver above and beyond your expectations.'
                 },
                 {
                     image: 'smart3.png',
                     link: '#',
                     title: 'Creativity',
-                    paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we&apos;ll drill deep to deliver above and beyond your expectations.'
+                    paragraph: 'We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we\'ll drill deep to deliver above and beyond your expectations.'
                 }
             ]
         }
