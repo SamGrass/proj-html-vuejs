@@ -47,8 +47,7 @@ export default {
                         We're Storytelling Experts With Creative Smarts
                     </h2>
                     <p>
-                        Our culture inspires the creative and innovative spirit found throughout our Studio. We breathe
-                        life into new ideas!
+                        Our culture inspires the creative and innovative spirit found throughout our Studio. We breathe life into new ideas!
                     </p>
                 </div>
             </div>
@@ -57,8 +56,7 @@ export default {
                 <div class="col-9 offset-3">
                     <ul class="row smart-cards-container">
                         <li class="col-4" v-for="card in smartCards">
-                            <SmartCard :imagePath="'/' + card.image" :titleURL="card.link" :titleText="card.title"
-                                :paragraphText="card.paragraph" />
+                            <SmartCard :imagePath="'/' + card.image" :titleURL="card.link" :titleText="card.title" :paragraphText="card.paragraph" />
                         </li>
                     </ul>
                 </div>
