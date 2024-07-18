@@ -1,10 +1,17 @@
 <script>
 import AppFooterCarousel from './AppFooterCarousel.vue'
+import { router } from '../router.js'
+
 export default {
     name: 'AppFooter',
     components: {
         AppFooterCarousel
-    }
+    },
+    data() {
+        return {
+            router
+        }
+    },
 
 }
 </script>
@@ -59,11 +66,11 @@ export default {
                         <img src="/footer-logo.png" alt="">
                     </div>
                     <nav class="col">
-                        <ul class="d-flex justify-content-end ms_links">
+                        <ul class="d-flex justify-content-end ms_links ms_link-router">
                             <!-- COLLEGARE POI AL ROUTER -->
-                            <li><a href="#!">Home</a></li>
-                            <li><a href="#!">About Us</a></li>
-                            <li><a href="#!">Contacts</a></li>
+                            <li v-for="(item, index) in router.getRoutes()" :key="index">
+                                <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -136,6 +143,13 @@ export default {
 
     .ms_links {
         gap: 1rem;
+        
+        .ms_link-router, li {
+            &:hover {
+                color: $blue
+            }
+        }
+        
 
         .ms_btn-socials {
             @include social-btn;

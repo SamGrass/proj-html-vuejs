@@ -34,7 +34,7 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .ms_card {
-    background-color: $rose;
+    background-color: #fff5f0;
     width: calc(25% - 1rem);
     margin-top: 4rem;
     border-radius: $rad-m;

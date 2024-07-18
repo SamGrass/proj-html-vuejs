@@ -71,3 +71,25 @@ body {
         color: $orange;
     }
 }
+
+// Link in nav e footer
+.ms_link-router, li {
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+// immagini con cerchio salmone
+.ms_image-circle {
+    border-radius: 50%;
+    padding: 1.5em;
+    background-color: #fff5f0;
+    transition: all 0.3s ease;
+    display: inline-block;
+    aspect-ratio: 1/1;
+    margin-bottom: 2rem;
+
+    img {
+        width: 5rem;
+        height: 100%;
+    }
+}
