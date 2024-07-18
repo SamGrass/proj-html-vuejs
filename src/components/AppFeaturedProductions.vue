@@ -70,6 +70,15 @@ h3{
     border-radius: $rad-xl;
     margin: 20px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // prove per l'effetto hover 
+    &:hover{
+        width: calc((100% / 2) - 40px);
+        color: $blue;
+    }
     // debug
     // background-color: $primary;
     // border: 2px white solid;
@@ -85,6 +94,10 @@ h3{
 .button.alternative{
     color: black;
     margin: 1.5rem 0 7rem;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 i{
@@ -93,12 +106,16 @@ i{
     height: 18%;
     border-radius: 50%;
     text-align: center;
-    padding-top: 0.7rem;
-    padding-left: 0.1rem;
     background-color: $white;
-    position: absolute;
-    top: 47%;
-    left:47%;
+    position: absolute;  
+    display: none;
+
+    &:hover{
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    }
 }
 
 .fa-play{
