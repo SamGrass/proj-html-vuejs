@@ -87,7 +87,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
+
 
     
     .ms_carousel {
@@ -173,16 +175,8 @@ export default {
         .ms_links {
             gap: 1rem;
 
-            .ms_btn-socials {        
-                border-radius: 50%;
-                padding: 0.3em;
-                border: 1px solid $grey;
-
-                i {
-                    width: 1.3rem;
-                    text-align: center;
-                    color: $blue;
-                }
+            .ms_btn-socials {
+                @include social-btn;  
             }
         }       
     }
