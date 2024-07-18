@@ -33,13 +33,13 @@ export default {
             <!-- aggiungere onde con css-->
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-5 offset-4 ms_text-newsletter">                       
+                    <div class="col-6 offset-3 ms_text-newsletter">                       
                         <h3>We Create New Worlds! </h3>
                         <h2>Want Tips On Your Storytelling? </h2>
                         <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
                         <form action="email">
-                            <input type="email" placeholder="Enter your email">
-                            <a href="#!">Submit</a>
+                            <input type="email" class="ms_email-text" placeholder="Enter your email">
+                            <a class="button" href="#!">Submit</a>
                         </form>
                     </div>
                 </div>
@@ -90,6 +90,9 @@ export default {
 @use '../styles/partials/variables' as *;
 
     
+    .ms_carousel {
+        padding: 3rem 0;
+    }
 
     .ms_newsletter {
         position: relative;
@@ -131,6 +134,25 @@ export default {
         h3 {
             color: $orange;
         }
+
+        form {
+            display: flex;
+            position: relative;
+
+            .ms_email-text {
+                width: 100%;
+                border-radius: 2em;
+                height: 3.5rem;
+                padding: 0 11rem 0 1rem;
+                border: none;
+            }
+
+            .button {
+                position: absolute;
+                top: 10%;
+                right: 1%;  
+            }
+        }    
     }
 
     
@@ -162,8 +184,6 @@ export default {
                     color: $blue;
                 }
             }
-        }
-        
-        
+        }       
     }
 </style>

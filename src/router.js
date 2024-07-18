@@ -12,21 +12,21 @@ const router = createRouter({
         {
             path: '/'
             ,
-            name: 'home'
+            name: 'Home'
             ,
             component: AppHome
         },
         {
             path: '/about'
             ,
-            name: 'aboutus'
+            name: 'About Us'
             ,
             component: AppAboutUs
         },
         {
             path: '/contact'
             ,
-            name: 'contactus'
+            name: 'Contact Us'
             ,
             component: AppContact
         },

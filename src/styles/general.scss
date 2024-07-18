@@ -35,13 +35,12 @@ body {
 
 // Buttons
 .button {
-    width: 10rem;
-    height: 3rem;
-    border-radius: 2rem;
+    width: 10em;
+    border-radius: 2em;
     background-color: $rose;
     color: black;
     text-align: center;
-    padding-top: 9px;
+    padding: 0.5em 0;
 }
 
 // Bacground elements
