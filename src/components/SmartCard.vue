@@ -41,7 +41,7 @@ export default {
     background-color: #fff1e8;
     background-image: linear-gradient(180deg, $white, #fff1e8);
     box-shadow: 0 .5rem 1.125rem 0 #eaeaee;
-    transition: all .3s;
+    transition: all $trns-stnd;
 
     &:hover {
         border-color: $white;
