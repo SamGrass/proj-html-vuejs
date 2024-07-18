@@ -44,8 +44,14 @@ body {
     padding: 0.5em 0;
 }
 
-// Bacground elements
+// Background elements
 .background-element {
     pointer-events: none;
     user-select: none;
+}
+
+// Containers with top and bottom shapes
+.vertical-shapes {
+    @include top-shape('/shape-top.png');
+    @include bottom-shape('/shape-bottom.png');
 }

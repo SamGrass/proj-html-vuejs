@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-    <section class="facts-section">
+    <section class="facts-section vertical-shapes">
         <div class="container">
             <h2 class="section-header">
                 Anidio Quick Facts
@@ -56,6 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 .facts-section {
     background-image: url(/counter-bg.png);
@@ -67,29 +68,6 @@ export default {
     .container {
         position: relative;
         z-index: 3;
-    }
-
-    &::before,
-    &::after {
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-
-    &::before {
-        background-image: url(/shape-top.png);
-        background-position: top;
-    }
-
-    &::after {
-        background-image: url(/shape-bottom.png);
-        background-position: bottom;
     }
 
     .planet {
