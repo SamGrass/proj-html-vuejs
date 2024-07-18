@@ -9,8 +9,8 @@
         justify-content: center;
     }
 
-    @else if if $type =='both' {
+    @else if $type =='both' {
         align-items: center;
-        align-items: center;
+        justify-content: center;
     }
 }
