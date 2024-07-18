@@ -32,3 +32,14 @@ body {
     color: #ffffff;
     background: $primary;
 }
+
+// Buttons
+.button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: $rose;
+    color: black;
+    text-align: center;
+    padding-top: 9px;
+}
