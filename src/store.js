@@ -20,5 +20,27 @@ export const store = reactive({
         {
             imageUrl: '/sponsor6.png',
         }
+    ],
+    teamList: [
+        {
+            imageUrl: '/team1.png',
+            name: 'Robert Coleman',
+            role: 'Owner & Creative Director'
+        },
+        {
+            imageUrl: '/team2.png',
+            name: 'Don Woods',
+            role: 'Administrator'
+        },
+        {
+            imageUrl: '/team2.png',
+            name: 'Tomas Nash',
+            role: '2d animator & Compositor'
+        },
+        {
+            imageUrl: '/team4.png',
+            name: 'Hector Vargas',
+            role: 'Project Lead & Senior Animator'
+        },
     ]
 })
