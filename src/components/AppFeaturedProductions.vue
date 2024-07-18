@@ -24,6 +24,8 @@ export default {
 
     <!-- 4 cards con effetto hover inclunato  -->
 
+    <!-- MANCA EFFETTO HOVER FILTER BLUE  -->
+
     <div class="offset-1 col-10 offset-1 d-flex flex-wrap">
 
         <div class="card_featured_productions">
