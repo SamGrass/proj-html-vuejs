@@ -36,7 +36,7 @@ export default {
         <nav>
             <img src="/public/logo.png" alt="">
             <div>
-                <ul>
+                <ul class="ms_link-router">
                     <!-- <li v-for="(item, index) in router" :key="index">
                         <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
                     </li> -->
