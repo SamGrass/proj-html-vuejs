@@ -86,15 +86,15 @@ export const store = reactive({
             title: 'Pre-Production',
             paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
         },
-        // {
-        //     image: '/process1.png',
-        //     title: 'Scripting',
-        //     paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
-        // },
-        // {
-        //     image: '/process2.png',
-        //     title: 'Pre-Production',
-        //     paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
-        // },
+        {
+            image: '/process1.png',
+            title: 'Scripting',
+            paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        },
+        {
+            image: '/process2.png',
+            title: 'Pre-Production',
+            paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        },
     ]
 })
