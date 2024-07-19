@@ -15,7 +15,7 @@ export default {
                        </div>
 
                        <!-- CERCA IMG DI RAGAZZA CHE MANCA  -->
-                         <img src="/public/dots-right.png" alt="">
+                         <img src="/public/right-man.png" alt="">
                     </div>
                 </div>
 </template>
@@ -26,10 +26,6 @@ export default {
     width: 80%;
     margin: 0 auto;
     margin-top: 5rem;
-}
-
-img{
-    width: 40%;
 }
 
 h1{ 
