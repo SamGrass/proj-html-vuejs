@@ -1,6 +1,6 @@
 <script>
 import { router } from '../router.js'
-import Jumbotron from './Jumbotron.vue';
+import JumbotronHome from './JumbotronHome.vue';
 import JumbotronAboutUs from './JumbotronAboutUs.vue';
 import JumbotronContacts from './JumbotronContacts.vue';
 
@@ -10,7 +10,7 @@ import JumbotronContacts from './JumbotronContacts.vue';
 export default {
     name: 'AppHeader',
     components: {
-        Jumbotron,
+        JumbotronHome,
         JumbotronAboutUs,
         JumbotronContacts
     },
@@ -34,29 +34,32 @@ export default {
     <header>
         <!-- pianeti in absolute  -->
         <div>
-            <img class="planet uno" src="../../public/globe1.png" alt="plantet">
-            <img class="planet due" src="../../public/globe2.png" alt="plantet">
-            <img class="planet tre" src="../../public/globe3.png" alt="plantet">
-            <img class="planet ufo" src="../../public/light.png" alt="plantet">
-            <img class="planet starleft" src="../../public/dots-left.png" alt="plantet">
-            <img class="planet starlight" src="../../public/dots-right.png" alt="plantet">
+            <img class="planet uno" src="/globe1.png" alt="plantet">
+            <img class="planet due" src="/globe2.png" alt="plantet">
+            <img class="planet tre" src="/globe3.png" alt="plantet">
+            <img class="planet ufo" src="/light.png" alt="plantet">
+            <img class="planet starleft" src="/dots-left.png" alt="plantet">
+            <img class="planet starlight" src="/dots-right.png" alt="plantet">
         </div>
 
         <!-- navbar con logo , link per le pagine e bottone Get a Quote  -->
         <nav>
-            <img src="/public/logo.png" alt="">
-            <div>
+            <img src="/logo.png" alt="">
+            <div >
                 <ul class="ms_link-router">
                     <li v-for="(item, index) in router.getRoutes()" :key="index">
                         <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
                     </li>
+                    <li>
+                        <a class="button" href="#">Get a Quote</a>
+                    </li>
                 </ul>
 
             </div>
-            <a class="button" href="#">Get a Quote</a>
+            
         </nav>
 
-        <Jumbotron v-if="activeIndex === 0"/>
+        <JumbotronHome v-if="activeIndex === 0"/>
         <JumbotronAboutUs v-else-if="activeIndex === 1"/>
         <JumbotronContacts v-else-if="activeIndex === 2"/>
     </header>
@@ -73,14 +76,12 @@ export default {
 // regole generali header 
 header {
     width: 100%;
-    background: url(../../public/banner-bg.png);
+    background: url(/banner-bg.png);
     background-size: cover;
     color: white;
     position: relative;
     z-index: 900;
     @include bottom-shape('/bottom-shape.png');
-    // debug
-    min-height: 10rem;
 }
 
 // regole navbar
@@ -96,6 +97,7 @@ nav {
 ul {
     display: flex;
     padding-top: 1rem;
+    align-items: center;    
 }
 
 li {

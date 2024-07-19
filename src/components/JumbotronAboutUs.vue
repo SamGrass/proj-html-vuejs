@@ -15,7 +15,7 @@ export default {
                     <span><a href="/">Home</a> <i class="fa-solid fa-arrow-right-long"></i> About Us </span>
                 </div>
 
-                    <img src="/public/rocket-banner.png" alt="">
+                    <img src="/rocket-banner.png" alt="">
             </div>
         </div>
     </div>

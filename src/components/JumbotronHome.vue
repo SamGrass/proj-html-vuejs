@@ -12,8 +12,8 @@ export default {
 
         <!-- img astronauti in absolute  -->
 
-        <img class="planet leftman" src="../../public/left-man.png" alt="plantet">
-        <img class="planet rightman" src="../../public/right-man.png" alt="plantet">
+        <img class="planet leftman" src="/left-man.png" alt="plantet">
+        <img class="planet rightman" src="/right-man.png" alt="plantet">
 
         <!-- titolo ,sottotitolo , paragrafo -->
          
@@ -33,7 +33,7 @@ export default {
 
                     <!-- Video -->
                     <div class="videointroduction">
-                        <img src="/public/middle.png" alt="">
+                        <img src="/middle.png" alt="">
                         <div class="buttonplayer">
                             <i class="fa-solid fa-play"></i>
                         </div>

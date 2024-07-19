@@ -16,7 +16,7 @@ export default {
             </div>
 
             <!-- CERCA IMG DI RAGAZZA CHE MANCA  -->
-                <img src="/public/right-man.png" alt="">
+                <img src="/right-man.png" alt="">
             </div>
         </div>
     </div>
