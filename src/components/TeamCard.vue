@@ -20,7 +20,7 @@ export default {
         <h5>{{ name }}</h5>
         <p>{{ role }}</p>
         <!-- socials -->
-        <ul class="d-flex justify-content-center ms_links">
+        <ul class="d-flex justify-content-center ms_links ">
             <!-- COLLEGARE AI SITI -->
             <li><a class="social-button" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
             <li><a class="social-button" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
@@ -30,6 +30,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/general.scss' as*;
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
