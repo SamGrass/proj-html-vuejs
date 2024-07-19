@@ -6,17 +6,20 @@ export default {
 
 
 <template>
-                <div class="row">
-                    <div class="offset-2 col-xl-9 d-flex justify-content-between title">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-xl-9 d-flex justify-content-between title">
 
-                        <div>
-                            <h1>About Us</h1>
-                            <span>Home <i class="fa-solid fa-arrow-right-long"></i> About Us </span>
-                       </div>
-
-                         <img src="/public/rocket-banner.png" alt="">
-                    </div>
+                <div>
+                    <h1>About Us</h1>
+                    <span><a href="/">Home</a> <i class="fa-solid fa-arrow-right-long"></i> About Us </span>
                 </div>
+
+                    <img src="/rocket-banner.png" alt="">
+            </div>
+        </div>
+    </div>
+                
 </template>
 
 
