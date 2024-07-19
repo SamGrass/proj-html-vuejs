@@ -3,6 +3,7 @@ import TeamSection from '../components/TeamSection.vue';
 import SmartSection from '../components/SmartSection.vue';
 import FactsSection from '../components/FactsSection.vue';
 import ServiceSection from '../components/ServiceSection.vue';
+import SponsorSection from '../components/SponsorSection.vue';
 
 export default {
     name: 'AppAboutUs',
@@ -10,7 +11,8 @@ export default {
         TeamSection,
         SmartSection,
         FactsSection,
-        ServiceSection
+        ServiceSection,
+        SponsorSection
     }
 
 }
@@ -22,6 +24,7 @@ export default {
         <FactsSection/>
         <ServiceSection/>
         <TeamSection/>
+        <SponsorSection/>
     </main> 
 </template>
 

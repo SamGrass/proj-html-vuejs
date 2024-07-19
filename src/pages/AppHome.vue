@@ -4,6 +4,7 @@ import SmartSection from '../components/SmartSection.vue';
 import FactsSection from '../components/FactsSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import AppFeaturedProductions from '../components/AppFeaturedProductions.vue';
+import SponsorSection from '../components/SponsorSection.vue';
 
 
 export default {
@@ -14,6 +15,7 @@ export default {
         FactsSection,
         ProcessSection,
         AppFeaturedProductions,
+        SponsorSection
     }
 
 }
@@ -26,6 +28,7 @@ export default {
         <AppFeaturedProductions/>
         <ProcessSection/>   
         <TeamSection/>
+        <SponsorSection/>
     </main>
 </template>
 
