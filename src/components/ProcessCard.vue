@@ -16,7 +16,7 @@ export default {
         <a class="ms_image-circle" href="#!">
             <img  :src="image" :alt="image">
         </a>
-        <div class="ms_bookmarker">{{ num }}</div>
+        <div class="ms_bookmarker">{{ num + 1 }}</div>
         <h4><a href="#!">{{ title }}</a></h4>
         <p>{{ paragraph }}</p>
     </div>
@@ -27,7 +27,7 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .ms_card {
-    width: calc(50% - 1rem);
+    width: 300px;
     border: 1px solid $rose;
     border-radius: $rad-m;
     padding: 2rem;

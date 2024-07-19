@@ -1,15 +1,17 @@
 <script>
-import AppFooterCarousel from './AppFooterCarousel.vue'
+import SponsorCard from './SponsorCard.vue'
 import { router } from '../router.js'
+import { store } from '../store.js';
 
 export default {
     name: 'AppFooter',
     components: {
-        AppFooterCarousel
+        SponsorCard
     },
     data() {
         return {
-            router
+            router,
+            store
         }
     },
 
@@ -30,7 +32,12 @@ export default {
                         </div>
                         <div>
                             <!-- parte di carosello -->
-                            <AppFooterCarousel />
+                            <div class="ms_carousel-container">
+                                <div class="ms_carousel-hidden">
+                                    <SponsorCard  v-for="(sponsor, index) in store.sponsorList" :key="index" :image="sponsor.imageUrl"/>
+                                    <SponsorCard  v-for="(sponsor, index) in store.sponsorList" :key="index" :image="sponsor.imageUrl"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,6 +106,24 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
+
+.ms_carousel-container {
+    overflow: hidden;
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc((-215px)* 6))}
+    }
+
+    .ms_carousel-hidden {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        animation: scroll 10s linear infinite;
+        width: calc(215px * 12);
+    }
+    
+}
 
 .ms_newsletter {
     .container {

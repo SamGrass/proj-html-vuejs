@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<template>
+<template>   
     <div class="ms_card">
         <!-- immagine -->
         <div class="ms_image-container">
@@ -33,11 +33,13 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
+
+
 .ms_card {
     background-color: #fff5f0;
-    width: calc(25% - 1rem);
     margin-top: 4rem;
     border-radius: $rad-m;
+    min-width: 300px;
 
     .ms_image-container {
         position: relative;

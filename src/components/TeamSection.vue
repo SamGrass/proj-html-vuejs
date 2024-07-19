@@ -41,8 +41,13 @@ export default {
                         </p>
                     </div>
                     <!-- carosello team -->
-                    <div class="ms_team-container">
-                        <TeamCard v-for="(team, index) in store.teamList" :key="index" :image="team.imageUrl" :name="team.name" :role="team.role" />
+                    <div>
+                        <div class="ms_carousel-container">
+                            <div class="ms_carousel-hidden"> 
+                                <TeamCard v-for="(team, index) in store.teamList" :key="index" :image="team.imageUrl" :name="team.name" :role="team.role" />
+                                <TeamCard v-for="(team, index) in store.teamList" :key="index" :image="team.imageUrl" :name="team.name" :role="team.role" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,9 +72,20 @@ export default {
     top: 0;
 }
 
-.ms_team-container {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-}
+.ms_carousel-container {
+        overflow: hidden;
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc((-315px)* 4))}
+        }
+
+        .ms_carousel-hidden {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            animation: scroll 30s linear infinite;
+            width: calc(315px * 8);
+            }
+        }
 </style>
