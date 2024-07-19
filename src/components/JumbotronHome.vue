@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'Jumbotron',
+    name: 'JumbotronHome',
 
 }
 </script>

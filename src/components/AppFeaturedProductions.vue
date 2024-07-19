@@ -118,7 +118,9 @@ h3 {
 
 .button.alternative {
     color: black;
+    background-color: $transparent;
     margin: 1.5rem 0 7rem;
+    border: 1px $rose solid ;
 
     &:hover {
         cursor: pointer;
