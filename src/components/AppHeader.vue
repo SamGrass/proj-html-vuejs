@@ -1,18 +1,29 @@
 <script>
 import { router } from '../router.js'
+import Jumbotron from './Jumbotron.vue';
+import JumbotronAboutUs from './JumbotronAboutUs.vue';
+import JumbotronContacts from './JumbotronContacts.vue';
+
+
 
 
 export default {
     name: 'AppHeader',
     components: {
+        Jumbotron,
+        JumbotronAboutUs,
+        JumbotronContacts
     },
     data() {
         return {
-            router
+            router,
+            activeIndex: 0
         }
     },
-    mounted() {
-        console.log(router.getRoutes());
+    methods: {
+        changeActiveIndex(index) {
+            this.activeIndex = index; 
+        }
     },
 
 }
@@ -37,7 +48,7 @@ export default {
             <div>
                 <ul class="ms_link-router">
                     <li v-for="(item, index) in router.getRoutes()" :key="index">
-                        <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+                        <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
                     </li>
                 </ul>
 
@@ -45,7 +56,9 @@ export default {
             <a class="button" href="#">Get a Quote</a>
         </nav>
 
-        <JumbotronContacts />
+        <Jumbotron v-if="activeIndex === 0"/>
+        <JumbotronAboutUs v-else-if="activeIndex === 1"/>
+        <JumbotronContacts v-else-if="activeIndex === 2"/>
     </header>
 
 </template>
