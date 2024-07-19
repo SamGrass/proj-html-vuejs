@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         changeActiveIndex(index) {
-            this.activeIndex = index; 
+            this.activeIndex = index;
         }
     },
 
@@ -57,40 +57,40 @@ export default {
                 </ul>
             </div>
 
-                   <!-- HAMBURGER MENU  -->
+            <!-- HAMBURGER MENU  -->
 
             <div class="hamburger-menu">
-                   <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                    <div >
+                <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+                    <div>
                         <ul>
-                    <li v-for="(item, index) in router.getRoutes()" :key="index">
-                        <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
-                    </li>
-                    <li><a  class="button" href="#">Get a Quote</a></li>
-                </ul>
+                            <li v-for="(item, index) in router.getRoutes()" :key="index">
+                                <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
+                            </li>
+                            <li><a class="button" href="#">Get a Quote</a></li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="navbar navbar-dark ">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span><i class="fa-solid fa-bars"></i></span>
+                            <span><i class="fa-solid fa-bars"></i></span>
                         </button>
                     </div>
                 </div>
             </div>
         </nav>
 
-         
 
 
-        <JumbotronHome v-if="activeIndex === 0"/>
-        <JumbotronAboutUs v-else-if="activeIndex === 1"/>
-        <JumbotronContacts v-else-if="activeIndex === 2"/>
+
+        <JumbotronHome v-if="activeIndex === 0" />
+        <JumbotronAboutUs v-else-if="activeIndex === 1" />
+        <JumbotronContacts v-else-if="activeIndex === 2" />
     </header>
-        <div class="mb-10" v-if="activeIndex === 0">
+    <div class="mb-10" v-if="activeIndex === 0">
 
-        </div>
+    </div>
 </template>
 
 
@@ -109,11 +109,16 @@ header {
     position: relative;
     z-index: 900;
     @include bottom-shape('/bottom-shape.png');
+
+    .button {
+        box-shadow: 0 .5rem 1rem #6d648b9c;
+    }
 }
 
 .mb-10 {
     margin-bottom: 10rem;
 }
+
 // regole navbar
 nav {
     padding-top: 2rem;
@@ -127,7 +132,7 @@ nav {
 ul {
     display: flex;
     padding-top: 1rem;
-    align-items: center;    
+    align-items: center;
 }
 
 li {
@@ -139,7 +144,7 @@ li {
     }
 }
 
-.hamburger-menu{
+.hamburger-menu {
     display: none;
 }
 
@@ -190,15 +195,15 @@ li {
 
 
 @media screen and (max-width: 991px) {
-    nav{
+    nav {
         width: 70%;
-    }   
+    }
 
-    .desktop_navbar{
+    .desktop_navbar {
         display: none;
     }
 
-    .hamburger-menu{
+    .hamburger-menu {
         display: flex;
     }
 

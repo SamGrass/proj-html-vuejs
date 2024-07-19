@@ -8,62 +8,61 @@ export default {
 <template>
 
 
-         <!-- CONTENUTO JUMBROTRON  -->
+    <!-- CONTENUTO JUMBROTRON  -->
 
-        <!-- img astronauti in absolute  -->
+    <!-- img astronauti in absolute  -->
 
-        <img class="planet leftman" src="/left-man.png" alt="plantet">
-        <img class="planet rightman" src="/right-man.png" alt="plantet">
+    <img class="planet leftman" src="/left-man.png" alt="plantet">
+    <img class="planet rightman" src="/right-man.png" alt="plantet">
 
-        <!-- titolo ,sottotitolo , paragrafo -->
-         
-        <div class="container">
-            <div class="row justify-content-center text-center ">
-                <div class="col-xl-9">
-                    <h5>Imagine,Create,Experience</h5>
-                    <h1>We Animate</h1>
-                    <h1>With Ninja-Like Precision</h1>
-                    <p>We are a character-driven animation studio striving to make high-quality animations.</p>
+    <!-- titolo ,sottotitolo , paragrafo -->
 
-                    <!-- button start a project e Portofolio  -->
-                    <div class="button_container">
-                        <a class="button" href="#">Start a Project</a>
-                        <a class="button alternative" href="#">Portofolio</a>
-                    </div>
+    <div class="container">
+        <div class="row justify-content-center text-center ">
+            <div class="col-xl-9">
+                <h5>Imagine, Create, Experience</h5>
+                <h1>We Animate</h1>
+                <h1>With Ninja-Like Precision</h1>
+                <p>We are a character-driven animation studio striving to make high-quality animations.</p>
 
-                    <!-- Video -->
-                    <div class="videointroduction">
-                        <img src="/middle.png" alt="">
-                        <div class="buttonplayer">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
+                <!-- button start a project e Portofolio  -->
+                <div class="button_container">
+                    <a class="button" href="#">Start a Project</a>
+                    <a class="button secondary-button" href="#">Portfolio</a>
+                </div>
+
+                <!-- Video -->
+                <div class="videointroduction">
+                    <img src="/middle.png" alt="">
+                    <div class="buttonplayer">
+                        <i class="fa-solid fa-play"></i>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 </template>
 
 <style lang="scss" scoped>
-
 // Regole Jumbotron
 
 @use '../styles/partials/variables' as *;
 
 
-h5{
+h5 {
     color: $orange;
 }
 
-.container{
+.container {
     margin-top: 50px;
 }
 
-.videointroduction{
+.videointroduction {
     width: 100%;
     min-height: 19rem;
-    border-radius:1rem;
+    border-radius: 1rem;
     transform: translateY(200px);
     margin-top: -150px;
     position: relative;
@@ -75,15 +74,15 @@ h5{
     // background-color: $orange;
 }
 
-.videointroduction img{
+.videointroduction img {
     position: relative;
 }
 
-.container p{
+.container p {
     margin-bottom: 2rem;
 }
 
-.button_container{
+.button_container {
     z-index: 4;
     display: flex;
     justify-content: center;
@@ -92,36 +91,34 @@ h5{
     margin: 0 auto;
 }
 
-.button.alternative{
-    background-color: $primary;
-    border: $rose 1px solid;
-    color: $white;
+.button {
+    box-shadow: 0 .5rem 1rem #6d648b9c;
 }
 
 // img astronauti in absolut 
-.planet{
+.planet {
     position: absolute;
     z-index: -1;
 }
 
-.planet.leftman{
+.planet.leftman {
     left: 2%;
     top: 25%;
     width: 15rem;
 }
 
-.planet.rightman{
+.planet.rightman {
     right: 2%;
     top: 25%;
     width: 15rem;
 }
 
-.buttonplayer{
+.buttonplayer {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     color: white;
-    background-color:#a616ea;
+    background-color: #a616ea;
     padding: 10px;
     position: absolute;
 }
@@ -131,16 +128,16 @@ h5{
 
 @media screen and (max-width: 991px) {
 
-.container{
-    margin: 5%;
-}
+    .container {
+        margin: 5%;
+    }
 
-.planet.leftman{
-    width: 10rem;
-}
+    .planet.leftman {
+        width: 10rem;
+    }
 
-.planet.rightman{
-    width: 10rem;
-}
+    .planet.rightman {
+        width: 10rem;
+    }
 }
 </style>

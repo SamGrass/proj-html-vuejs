@@ -79,6 +79,7 @@ body {
 
 .button.secondary-button {
     color: $rose;
+    border: 1px solid $rose;
 
     &::after {
         background-color: $transparent;
