@@ -98,10 +98,11 @@ body {
 }
 
 // Link in nav e footer
-.ms_link-router,
-li {
-    font-weight: 600;
-    transition: all 0.3s ease;
+.ms_link-router {
+    li {
+        font-weight: 600;
+        transition: all $trns-stnd ease;
+    }
 }
 
 // immagini con cerchio salmone
