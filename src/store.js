@@ -47,54 +47,54 @@ export const store = reactive({
         {
             image: '/process1.png',
             title: 'Motion Graphics',
-            paragraph: 'The best in the business, served to your audience’s eyeballs.'
+            paragraph: 'The best in the business, served to your audience\'s eyeballs.'
         },
         {
             image: '/process2.png',
             title: 'Character Design',
-            paragraph: 'The best in the business, served to your audience’s eyeballs. '
+            paragraph: 'The best in the business, served to your audience\'s eyeballs. '
         },
         {
             image: '/smart1.png',
             title: 'Storyboards',
-            paragraph: 'The best in the business, served to your audience’s eyeballs. '
+            paragraph: 'The best in the business, served to your audience\'s eyeballs. '
         },
         {
             image: '/smart2.png',
             title: 'Animatics',
-            paragraph: 'The best in the business, served to your audience’s eyeballs.'
+            paragraph: 'The best in the business, served to your audience\'s eyeballs.'
         },
         {
             image: '/smart3.png',
             title: 'Film and TV',
-            paragraph: 'The best in the business, served to your audience’s eyeballs.'
+            paragraph: 'The best in the business, served to your audience\'s eyeballs.'
         },
         {
             image: '/smart1.png',
             title: 'Script writing',
-            paragraph: 'The best in the business, served to your audience’s eyeballs.'
+            paragraph: 'The best in the business, served to your audience\'s eyeballs.'
         },
     ],
     processList: [
         {
             image: '/process1.png',
             title: 'Scripting',
-            paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+            paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
         },
         {
             image: '/process2.png',
             title: 'Pre-Production',
-            paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+            paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
         },
         // {
         //     image: '/process1.png',
         //     title: 'Scripting',
-        //     paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        //     paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
         // },
         // {
         //     image: '/process2.png',
         //     title: 'Pre-Production',
-        //     paragraph: 'We’ll take your idea and create a technical script which consists of action notes and animation descriptions'
+        //     paragraph: 'We\'ll take your idea and create a technical script which consists of action notes and animation descriptions'
         // },
     ]
 })
