@@ -33,7 +33,7 @@ export default {
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3 text-center section-header">
+                <div class="offset-lg-1 col-lg-10 offset-lg-1 text-center section-header">
                     <h3> Our Works </h3>
                     <h2> Featured Productions </h2>
                     <p> Here's just a small sample of some of those projects that we're quite proud of. If you're looking for something specific feel free to get in contact with us. </p>

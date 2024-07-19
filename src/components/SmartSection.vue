@@ -39,7 +39,7 @@ export default {
     <section class="smart-section">
         <div class="container">
             <div class="row section-header">
-                <div class="col-6 offset-3">
+                <div class="col-lg-6 offset-lg-3 offset-md-1 col-md-10">
                     <h3>
                         Our Love For Animation
                     </h3>
@@ -53,19 +53,26 @@ export default {
             </div>
 
             <div class="row">
-                <div class="col-9 offset-3">
+                <div class="col-lg-9 offset-lg-3">
                     <ul class="row smart-cards-container">
-                        <li class="col-4" v-for="card in smartCards">
+                        <li class="col-lg-4 col-md-6 accentratore-card" v-for="card in smartCards">
                             <SmartCard :imagePath="'/' + card.image" :titleURL="card.link" :titleText="card.title" :paragraphText="card.paragraph" />
                         </li>
                     </ul>
                 </div>
             </div>
+
+                <!-- IMG BACKGROUND DA MEDIA QUERY MD (992px) -->
+                <div class="smart-mascotte-two background-element">
+                    <img src="/public/smarttwo.png" alt="">
+                </div>
         </div>
 
         <div class="smart-mascotte background-element">
             <img src="/smart.png" alt="Smart Mascotte">
         </div>
+
+    
 
         <div class="rocket background-element">
             <img src="/smart4.png" alt="Rocket">
@@ -121,5 +128,35 @@ export default {
     img {
         height: 100%;
     }
+
+    .smart-mascotte-two{
+        display: none;
+    }
+
+
+    // MEDIA QUERY 
+
+    @media screen and (max-width: 991px) {
+        .smart-mascotte{
+            display: none;
+        }
+
+        .accentratore-card{
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+
+        .smart-mascotte-two{
+            z-index: -1;
+            width: 100%;
+            display: inline;
+            position: absolute;
+            top: 19rem;
+            left: 0rem;
+            filter: opacity(0.3);
+        }
+    }
+
+
 }
 </style>
