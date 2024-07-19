@@ -82,9 +82,9 @@ export default {
                     <div class="col">
                         <ul class="d-flex justify-content-end ms_links">
                             <!-- COLLEGARE AI SITI -->
-                            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a class="social-button" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a class="social-button" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a class="social-button" href="#!"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -143,16 +143,12 @@ export default {
 
     .ms_links {
         gap: 1rem;
-        
-        .ms_link-router, li {
+
+        .ms_link-router,
+        li {
             &:hover {
                 color: $blue
             }
-        }
-        
-
-        .ms_btn-socials {
-            @include social-btn;
         }
     }
 }

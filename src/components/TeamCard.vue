@@ -22,9 +22,9 @@ export default {
         <!-- socials -->
         <ul class="d-flex justify-content-center ms_links">
             <!-- COLLEGARE AI SITI -->
-            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a class="ms_btn-socials" href="#!"><i class="fa-brands fa-instagram"></i></a></li>                           
+            <li><a class="social-button" href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a class="social-button" href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a class="social-button" href="#!"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
     </div>
 </template>
@@ -49,13 +49,10 @@ export default {
             top: -1.5rem;
         }
     }
+
     .ms_links {
         padding: 1rem 0;
         gap: 1rem;
-
-        .ms_btn-socials {
-            @include social-btn;  
-        }
-    }  
+    }
 }
 </style>

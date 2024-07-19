@@ -45,6 +45,31 @@ body {
     text-align: center;
     padding: 0.5em 0;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.social-button {
+    border-radius: 50%;
+    padding: 0.3em;
+    border: 1px solid $grey;
+    transition: all 0.3s ease;
+    color: $blue;
+    cursor: pointer;
+
+    &>* {
+        width: 1.3em;
+        aspect-ratio: 1/1;
+        text-align: center;
+    }
+
+    &:hover {
+        border-color: $orange;
+        background-color: $orange;
+
+        &>* {
+            color: $cream;
+        }
+    }
 }
 
 // Background elements
@@ -73,7 +98,8 @@ body {
 }
 
 // Link in nav e footer
-.ms_link-router, li {
+.ms_link-router,
+li {
     font-weight: 600;
     transition: all 0.3s ease;
 }
