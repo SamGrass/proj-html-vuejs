@@ -6,18 +6,21 @@ export default {
 
 
 <template>
-                <div class="row">
-                    <div class="offset-2 col-xl-9 d-flex justify-content-between title">
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-xl-9 d-flex justify-content-between title">
 
-                        <div>
-                            <h1>Contacs</h1>
-                            <span>Home <i class="fa-solid fa-arrow-right-long"></i> Contacs </span>
-                       </div>
+                <div>
+                    <h1>Contacs</h1>
+                    <span><a href="/">Home</a><i class="fa-solid fa-arrow-right-long"></i> Contacs </span>
+            </div>
 
-                       <!-- CERCA IMG DI RAGAZZA CHE MANCA  -->
-                         <img src="/public/right-man.png" alt="">
-                    </div>
-                </div>
+            <!-- CERCA IMG DI RAGAZZA CHE MANCA  -->
+                <img src="/public/right-man.png" alt="">
+            </div>
+        </div>
+    </div>
+                
 </template>
 
 
