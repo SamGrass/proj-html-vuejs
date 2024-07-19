@@ -64,18 +64,19 @@ h5{
     width: 100%;
     min-height: 19rem;
     border-radius:1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    transform: translateY(200px);
+    margin-top: -150px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
     // debug
     // background-color: $orange;
 }
 
 .videointroduction img{
-    z-index: 900;
+    position: relative;
 }
 
 .container p{
@@ -83,6 +84,7 @@ h5{
 }
 
 .button_container{
+    z-index: 4;
     display: flex;
     justify-content: space-around;
     width: 50%;

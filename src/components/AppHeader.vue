@@ -63,7 +63,9 @@ export default {
         <JumbotronAboutUs v-else-if="activeIndex === 1"/>
         <JumbotronContacts v-else-if="activeIndex === 2"/>
     </header>
+        <div class="mb-10" v-if="activeIndex === 0">
 
+        </div>
 </template>
 
 
@@ -84,6 +86,9 @@ header {
     @include bottom-shape('/bottom-shape.png');
 }
 
+.mb-10 {
+    margin-bottom: 10rem;
+}
 // regole navbar
 nav {
     padding-top: 2rem;
