@@ -122,8 +122,13 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
+.ms_carousel {
+    padding: 0 0 7.5rem;
+}
+
 .ms_carousel-container {
     overflow: hidden;
+    
 
     @keyframes scroll {
         0% { transform: translateX(0); }

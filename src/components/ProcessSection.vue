@@ -41,6 +41,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+section {
+    padding: 0 0 7.5rem;
+}
 .ms_carousel-container {
     overflow: hidden;
 
