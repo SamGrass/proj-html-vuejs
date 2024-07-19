@@ -4,7 +4,7 @@ import { router } from '../router.js'
 
 export default {
     name: 'AppHeader',
-    components:{
+    components: {
     },
     data() {
         return {
@@ -14,7 +14,7 @@ export default {
     mounted() {
         console.log(router.getRoutes());
     },
-    
+
 }
 </script>
 
@@ -40,20 +40,12 @@ export default {
                         <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
                     </li>
                 </ul>
-                
+
             </div>
             <a class="button" href="#">Get a Quote</a>
         </nav>
 
         <JumbotronContacts />
-
-
-
-
-        <!-- ondina a fine header  -->
-        <div>
-            <img src="../../public/bottom-shape.png" alt="">
-        </div>
     </header>
 
 </template>
@@ -61,6 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 
 
@@ -72,12 +65,13 @@ header {
     color: white;
     position: relative;
     z-index: 900;
+    @include bottom-shape('/bottom-shape.png');
     // debug
-    min-height: 10rem;   
+    min-height: 10rem;
 }
 
 // regole navbar
-nav{
+nav {
     padding-top: 2rem;
     width: 80%;
     margin: 0 auto;
@@ -86,61 +80,59 @@ nav{
     align-items: center;
 }
 
-ul{
+ul {
     display: flex;
     padding-top: 1rem;
 }
 
-li{
+li {
     margin: 0 1rem;
 
-    &:hover{
-    color: $orange;
-    cursor: pointer;
+    &:hover {
+        color: $orange;
+        cursor: pointer;
     }
 }
 
 // regole dei pianeti in background 
 
-.planet{
+.planet {
     position: absolute;
     z-index: -1;
 }
 
 
-.planet.uno{
+.planet.uno {
     top: 10%;
     left: 10%;
     width: 5rem;
 }
 
-.planet.due{
+.planet.due {
     top: 18%;
     right: 30%;
     width: 5rem;
 }
 
-.planet.tre{
+.planet.tre {
     top: -18%;
     left: 33%;
     width: 18rem;
 }
 
-.planet.ufo{
+.planet.ufo {
     right: 9%;
     top: 11%;
 }
 
-.planet.starleft{
+.planet.starleft {
     top: 5%;
     left: 1%;
 }
 
-.planet.starlight{
+.planet.starlight {
     top: 8%;
     right: 1%;
     z-index: -2;
 }
-
 </style>
-
