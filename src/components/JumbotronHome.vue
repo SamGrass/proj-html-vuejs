@@ -74,6 +74,10 @@ h5{
     // background-color: $orange;
 }
 
+.videointroduction img{
+    z-index: 900;
+}
+
 .container p{
     margin-bottom: 2rem;
 }
