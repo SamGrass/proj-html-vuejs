@@ -41,6 +41,7 @@ h4 {
   font-weight: 500;
 }
 
+// Default page section
 section {
   padding: 7.5rem 0;
   position: relative;
@@ -48,7 +49,13 @@ section {
   text-align: center;
 
   .section-header {
-    margin-bottom: 3.125rem;
+    margin: 0 auto 3.125rem;
+    width: 95%;
+    max-width: 45rem;
+
+    p {
+      margin: 0 3.75rem;
+    }
   }
 
   h2 {
@@ -58,6 +65,37 @@ section {
   h3 {
     font-size: 1.5rem;
     color: $blue;
+  }
+}
+
+// Jumbotron section
+section.jumbotron-section {
+  color: $white;
+  padding: 0;
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    color: $orange;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+// Purple crack-like page section
+section.crack-section {
+  background-image: url(/counter-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  h3 {
+    color: $orange;
   }
 }
 </style>

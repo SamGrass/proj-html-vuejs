@@ -38,41 +38,37 @@ export default {
 <template>
     <section class="smart-section">
         <div class="container">
-            <div class="row section-header">
-                <div class="col-lg-6 offset-lg-3 offset-md-1 col-md-10">
-                    <h3>
-                        Our Love For Animation
-                    </h3>
-                    <h2>
-                        We're Storytelling Experts With Creative Smarts
-                    </h2>
-                    <p>
-                        Our culture inspires the creative and innovative spirit found throughout our Studio. We breathe life into new ideas!
-                    </p>
-                </div>
+            <div class="section-header">
+                <h3>
+                    Our Love For Animation
+                </h3>
+                <h2>
+                    We're Storytelling Experts With Creative Smarts
+                </h2>
+                <p>
+                    Our culture inspires the creative and innovative spirit found throughout our Studio. We breathe life into new ideas!
+                </p>
             </div>
 
             <div class="row">
-                <div class="col-lg-9 offset-lg-3">
-                    <ul class="row smart-cards-container">
-                        <li class="col-lg-4 col-md-6 accentratore-card" v-for="card in smartCards">
+                <div class="col-xl-9 offset-xl-3">
+                    <ul class="row justify-content-center smart-cards-container">
+                        <li class="col-lg-4 col-md-6 mb-4 mb-lg-0" v-for="card in smartCards">
                             <SmartCard :imagePath="'/' + card.image" :titleURL="card.link" :titleText="card.title" :paragraphText="card.paragraph" />
                         </li>
                     </ul>
                 </div>
             </div>
-
-                <!-- IMG BACKGROUND DA MEDIA QUERY MD (992px) -->
-                <div class="smart-mascotte-two background-element">
-                    <img src="/public/smarttwo.png" alt="">
-                </div>
         </div>
 
         <div class="smart-mascotte background-element">
             <img src="/smart.png" alt="Smart Mascotte">
         </div>
 
-    
+
+        <div class="smart-mascotte-two background-element">
+            <img src="/public/smarttwo.png" alt="">
+        </div>
 
         <div class="rocket background-element">
             <img src="/smart4.png" alt="Rocket">
@@ -115,6 +111,25 @@ export default {
         left: 0;
         z-index: 1;
         height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .smart-mascotte-two {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        opacity: .1;
+
+        img {
+            width: 100%;
+        }
     }
 
     .rocket {
@@ -123,40 +138,20 @@ export default {
         right: 0;
         z-index: 1;
         height: 8.75rem;
+
+        img {
+            height: 100%;
+        }
     }
 
-    img {
-        height: 100%;
-    }
-
-    .smart-mascotte-two{
-        display: none;
-    }
-
-
-    // MEDIA QUERY 
-
-    @media screen and (max-width: 991px) {
-        .smart-mascotte{
+    @media screen and (max-width: 1199px) {
+        .smart-mascotte {
             display: none;
         }
 
-        .accentratore-card{
-            margin: 0 auto;
-            margin-bottom: 3rem;
-        }
-
-        .smart-mascotte-two{
-            z-index: -1;
-            width: 100%;
-            display: inline;
-            position: absolute;
-            top: 19rem;
-            left: 0rem;
-            filter: opacity(0.3);
+        .smart-mascotte-two {
+            display: block;
         }
     }
-
-
 }
 </style>

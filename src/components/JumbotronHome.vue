@@ -6,54 +6,45 @@ export default {
 </script>
 
 <template>
+    <section class="jumbotron-section">
 
+        <!-- img astronauti in absolute  -->
 
-    <!-- CONTENUTO JUMBROTRON  -->
+        <img class="background-element leftman" src="/left-man.png" alt="Left Astronaut">
+        <img class="background-element rightman" src="/right-man.png" alt="Right Astronaut">
 
-    <!-- img astronauti in absolute  -->
+        <!-- titolo ,sottotitolo , paragrafo -->
 
-    <img class="planet leftman" src="/left-man.png" alt="plantet">
-    <img class="planet rightman" src="/right-man.png" alt="plantet">
-
-    <!-- titolo ,sottotitolo , paragrafo -->
-
-    <div class="container">
-        <div class="row justify-content-center text-center ">
-            <div class="col-xl-9">
-                <h5>Imagine, Create, Experience</h5>
-                <h1>We Animate</h1>
-                <h1>With Ninja-Like Precision</h1>
+        <div class="container">
+            <div class="section-header">
+                <h3>Imagine, Create, Experience</h3>
+                <h1>We Animate <br> With Ninja-Like Precision</h1>
                 <p>We are a character-driven animation studio striving to make high-quality animations.</p>
+            </div>
 
-                <!-- button start a project e Portofolio  -->
-                <div class="button_container">
-                    <a class="button" href="#">Start a Project</a>
-                    <a class="button secondary-button" href="#">Portfolio</a>
-                </div>
+            <!-- buttons start a project and Portofolio  -->
+            <div class="button_container">
+                <a class="button" href="#">Start a Project</a>
+                <a class="button secondary-button" href="#">Portfolio</a>
+            </div>
 
-                <!-- Video -->
-                <div class="videointroduction">
-                    <img src="/middle.png" alt="">
-                    <div class="buttonplayer">
-                        <i class="fa-solid fa-play"></i>
+            <div class="row justify-content-center">
+                <div class="col-xl-9">
+                    <!-- Video -->
+                    <div class="videointroduction">
+                        <img src="/middle.png" alt="">
+                        <div class="buttonplayer">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
+    </section>
 </template>
 
 <style lang="scss" scoped>
-// Regole Jumbotron
-
 @use '../styles/partials/variables' as *;
-
-
-h5 {
-    color: $orange;
-}
 
 .container {
     margin-top: 50px;
@@ -70,16 +61,10 @@ h5 {
     justify-content: center;
     align-items: center;
     z-index: 3;
-    // debug
-    // background-color: $orange;
 }
 
 .videointroduction img {
     position: relative;
-}
-
-.container p {
-    margin-bottom: 2rem;
 }
 
 .button_container {
@@ -96,18 +81,18 @@ h5 {
 }
 
 // img astronauti in absolut 
-.planet {
+.background-element {
     position: absolute;
     z-index: -1;
 }
 
-.planet.leftman {
+.background-element.leftman {
     left: 2%;
     top: 25%;
     width: 15rem;
 }
 
-.planet.rightman {
+.background-element.rightman {
     right: 2%;
     top: 25%;
     width: 15rem;
@@ -127,16 +112,11 @@ h5 {
 
 
 @media screen and (max-width: 991px) {
-
-    .container {
-        margin: 5%;
-    }
-
-    .planet.leftman {
+    .background-element.leftman {
         width: 10rem;
     }
 
-    .planet.rightman {
+    .background-element.rightman {
         width: 10rem;
     }
 }

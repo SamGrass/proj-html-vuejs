@@ -29,13 +29,13 @@ export default {
         <section class="ms_newsletter vertical-shapes crack-section">
             <!-- aggiungere onde con css-->
             <div class="container">
+                <div class="section-header">
+                    <h3>We Create New Worlds! </h3>
+                    <h2>Want Tips On Your Storytelling? </h2>
+                    <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
+                </div>
                 <div class="row">
-                    <div class="col-12 col-xl-6 offset-xl-3 ms_text-newsletter">
-                        <div class="section-header">
-                            <h3>We Create New Worlds! </h3>
-                            <h2>Want Tips On Your Storytelling? </h2>
-                            <p>Join our newsletter for tips on how to elevate your brand through storytelling</p>
-                        </div>
+                    <div class="col-10 col-lg-8 offset-1 offset-lg-2 ms_text-newsletter">
                         <form action="email">
                             <input type="email" class="ms_email-text" placeholder="Enter your email">
                             <a class="button" href="#!">Submit</a>
@@ -55,10 +55,6 @@ export default {
                     </div>
                     <nav class="col">
                         <ul class="d-flex justify-content-end ms_links ms_link-router">
-                            <!-- COLLEGARE POI AL ROUTER -->
-                            <!-- <li v-for="(item, index) in router.getRoutes()" :key="index">
-                                <router-link @click="$emit('changeIndex'), changeActiveIndex(index)"  :to="{ name: item.name }">{{ item.name }}</router-link>
-                            </li> -->
                             <li>
                                 <a href="/">Home</a>
                             </li>

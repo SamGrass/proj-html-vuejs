@@ -129,7 +129,7 @@ export default {
         <div class="content-wrapper vertical-shapes">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-5 first-column">
+                    <div class="col-lg-5 col-12 first-column">
                         <h4 class="section-header">
                             Reach us directly!
                         </h4>
@@ -175,7 +175,7 @@ export default {
 
                     </div>
 
-                    <div class="col-6 offset-1">
+                    <div class="col-lg-6 offset-lg-1 col-12">
                         <div class="contact-form">
                             <div class="section-header">
                                 <h4>
@@ -255,6 +255,8 @@ export default {
 
                 .text {
                     font-weight: 500;
+                    overflow-wrap: break-word;
+                    flex: 1 1;
 
                     &>* {
                         display: block;
@@ -351,6 +353,10 @@ export default {
             [type='submit'] {
                 width: 100%;
                 border: none;
+
+                &.button {
+                    color: black;
+                }
             }
         }
     }

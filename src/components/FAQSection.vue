@@ -42,14 +42,10 @@ export default {
 <template>
     <section class="faq-section">
         <div class="container">
-            <div class="row">
-                <div class="col-6 offset-3">
-                    <div class="section-header">
-                        <h3>We're Here to Help</h3>
-                        <h2>Frequently Asked Questions</h2>
-                        <p>We're always interested in having a chat or discussing your next big project, so drop us a line!</p>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h3>We're Here to Help</h3>
+                <h2>Frequently Asked Questions</h2>
+                <p>We're always interested in having a chat or discussing your next big project, so drop us a line!</p>
             </div>
 
             <ul class="faqs-list">
@@ -118,6 +114,7 @@ export default {
                         border-radius: 50%;
                         border: 1px solid $grey;
                         @include flex-center;
+                        flex-shrink: 0;
 
                         &>* {
                             font-weight: 400;

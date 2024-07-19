@@ -122,19 +122,6 @@ body {
     @include bottom-shape('/shape-bottom.png');
 }
 
-// Purple crack-like page section
-.crack-section {
-    background-image: url(/counter-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: $white;
-
-    h3 {
-        color: $orange;
-    }
-}
-
 // Link in nav e footer
 .ms_link-router {
     li {

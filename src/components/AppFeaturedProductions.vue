@@ -32,16 +32,14 @@ export default {
 <template>
     <section>
         <div class="container">
-            <div class="row">
-                <div class="offset-lg-1 col-lg-10 offset-lg-1 text-center section-header">
-                    <h3> Our Works </h3>
-                    <h2> Featured Productions </h2>
-                    <p> Here's just a small sample of some of those projects that we're quite proud of. If you're looking for something specific feel free to get in contact with us. </p>
-                </div>
+            <div class="offset-lg-1 col-lg-10 offset-lg-1 text-center section-header">
+                <h3> Our Works </h3>
+                <h2> Featured Productions </h2>
+                <p> Here's just a small sample of some of those projects that we're quite proud of. If you're looking for something specific feel free to get in contact with us. </p>
             </div>
 
             <ul class="row">
-                <li v-for="work in featuredWorks" class="col-6">
+                <li v-for="work in featuredWorks" class="col-md-6 col-12">
                     <div class="card-featured-productions">
                         <img :src="work.image" alt="">
                         <div class="overlay-hover">
@@ -120,7 +118,7 @@ h3 {
     color: black;
     background-color: $transparent;
     margin: 1.5rem 0 7rem;
-    border: 1px $rose solid ;
+    border: 1px $rose solid;
 
     &:hover {
         cursor: pointer;

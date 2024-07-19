@@ -42,7 +42,7 @@ export default {
             </h2>
 
             <ul class="row">
-                <li class="col-lg-3 col-md-6" v-for="fact in facts">
+                <li class="col-lg-3 col-md-6 col-12 g-4" v-for="fact in facts">
                     <FactsCard :factNumber="fact.number" :factText="fact.text" />
                 </li>
             </ul>
@@ -79,21 +79,11 @@ export default {
             height: 100%;
         }
     }
-
-      // MEDIA QUERY 
-
-    @media screen and (max-width: 991px) {
-        .container li{
-            margin-bottom: 2rem;
-        }
-    }
 }
 
 @keyframes factsPlanet {
     30% {
         transform: translate(-50%, -50%) rotate(180deg);
     }
-
-  
 }
 </style>
