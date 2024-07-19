@@ -124,4 +124,23 @@ h5{
 }
 
 
+// //  // MEDIA QUERIES // // // 
+
+
+@media screen and (max-width: 991px) {
+
+    .container{
+        width: 59%;
+    }
+
+    .planet.leftman{
+        width: 10rem;
+    }
+
+    .planet.rightman{
+        width: 10rem;
+    }
+}
+
+
 </style>
