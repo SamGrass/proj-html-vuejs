@@ -86,7 +86,8 @@ h5{
 .button_container{
     z-index: 4;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
     width: 50%;
     margin: 0 auto;
 }
@@ -131,7 +132,7 @@ h5{
 @media screen and (max-width: 991px) {
 
 .container{
-    width: 59%;
+    margin: 5%;
 }
 
 .planet.leftman{
