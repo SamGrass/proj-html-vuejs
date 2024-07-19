@@ -17,11 +17,10 @@ export default {
 </script>
 
 <template>
-    <section>
-        <img class="ms_thumb" src="/process-thumb.png" alt="">
+    <section> 
         <div class="container">
-            <div class="row">
-                <div class="col-6 offset-6">
+            <div class="row flex-xl-row-reverse align-items-center">
+                <div class="col-md-12  col-xl-6">
                     <div class="text-start section-header">
                         <h3>Our Process</h3>
                         <h2>Our Process for Your Animation Production </h2>
@@ -34,8 +33,14 @@ export default {
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12 col-xl-6">
+                    <div class="ms_image-container">
+                        <img class="ms_thumb" src="/process-thumb.png" alt="">
+                    </div>
+                    
+                </div>
             </div>
-        </div>
+        </div>    
     </section>
 
 </template>
@@ -43,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 
 section {
-    padding: 0 0 7.5rem;
+    padding: 0;
 }
 .ms_carousel-container {
     overflow: hidden;
@@ -63,14 +68,36 @@ section {
     
 }
 
-.ms_thumb {
-    position: absolute;
-    top: 0;
-    left: -2rem;
-    transition: all 0.5s ease;
+.ms_image-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 
-    &:hover {
-        left: 0;
+    .ms_thumb {
+        position: relative;
+        top: 0;
+        left: -2rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+            left: 0;
+        }
     }
 }
+
+@media screen and (min-width: 1200px) {
+
+.ms_image-container {
+
+    .ms_thumb {
+        max-width: none;
+        left: -40%;
+
+        &:hover {
+            left: -35%;
+        }
+    }
+}
+}
+
 </style>
