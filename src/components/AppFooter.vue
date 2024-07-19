@@ -30,7 +30,7 @@ export default {
             <!-- aggiungere onde con css-->
             <div class="container">
                 <div class="row">
-                    <div class="col-6 offset-3 ms_text-newsletter">
+                    <div class="col-12 col-xl-6 offset-xl-3 ms_text-newsletter">
                         <div class="section-header">
                             <h3>We Create New Worlds! </h3>
                             <h2>Want Tips On Your Storytelling? </h2>
