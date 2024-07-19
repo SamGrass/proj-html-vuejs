@@ -43,9 +43,10 @@ export default {
         </div>
 
         <!-- navbar con logo , link per le pagine e bottone Get a Quote  -->
-        <nav>
+        <nav class="justify-content-md-between">
             <img src="/logo.png" alt="">
-            <div >
+            <div class="desktop_navbar">
+
                 <ul class="ms_link-router">
                     <li v-for="(item, index) in router.getRoutes()" :key="index">
                         <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
@@ -54,10 +55,35 @@ export default {
                         <a class="button" href="#">Get a Quote</a>
                     </li>
                 </ul>
-
             </div>
-            
+            <a  class="button desktop_navbar" href="#">Get a Quote</a>
+
+                   <!-- HAMBURGER MENU  -->
+
+            <div class="hamburger-menu">
+                   <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+                    <div >
+                        <ul>
+                    <li v-for="(item, index) in router.getRoutes()" :key="index">
+                        <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
+                    </li>
+                    <li><a  class="button" href="#">Get a Quote</a></li>
+                </ul>
+                    </div>
+                </div>
+
+                <div class="navbar navbar-dark ">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="fa-solid fa-bars"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </nav>
+
+         
+
 
         <JumbotronHome v-if="activeIndex === 0"/>
         <JumbotronAboutUs v-else-if="activeIndex === 1"/>
@@ -114,6 +140,10 @@ li {
     }
 }
 
+.hamburger-menu{
+    display: none;
+}
+
 // regole dei pianeti in background 
 
 .planet {
@@ -154,5 +184,36 @@ li {
     top: 8%;
     right: 1%;
     z-index: -2;
+}
+
+
+// //  // MEDIA QUERIES // // // 
+
+
+@media screen and (max-width: 991px) {
+    nav{
+        width: 70%;
+    }   
+
+    .desktop_navbar{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .planet.tre {
+        display: none;
+    }
+
+    .planet.starlight {
+        display: none;
+    }
+
+    .planet.starleft {
+        display: none;
+    }
+
 }
 </style>
