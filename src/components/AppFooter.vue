@@ -11,7 +11,13 @@ export default {
     data() {
         return {
             router,
-            store
+            store,
+            activeIndex: 0
+        }
+    },
+    methods: {
+        changeActiveIndex(index) {
+            this.activeIndex = index; 
         }
     },
 
@@ -75,8 +81,17 @@ export default {
                     <nav class="col">
                         <ul class="d-flex justify-content-end ms_links ms_link-router">
                             <!-- COLLEGARE POI AL ROUTER -->
-                            <li v-for="(item, index) in router.getRoutes()" :key="index">
-                                <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+                            <!-- <li v-for="(item, index) in router.getRoutes()" :key="index">
+                                <router-link @click="$emit('changeIndex'), changeActiveIndex(index)"  :to="{ name: item.name }">{{ item.name }}</router-link>
+                            </li> -->
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="#!">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#!">Contact Us</a>
                             </li>
                         </ul>
                     </nav>
