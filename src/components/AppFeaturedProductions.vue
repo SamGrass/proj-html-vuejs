@@ -2,75 +2,62 @@
 export default {
     name: 'AppFeaturedProductions',
 
+    data() {
+        return {
+            featuredWorks: [
+                {
+                    image: '/work1.png',
+                    link: '#'
+                },
+                {
+                    image: '/work2.png',
+                    link: '#'
+                },
+                {
+                    image: '/work3.png',
+                    link: '#'
+                },
+                {
+                    image: '/work4.png',
+                    link: '#'
+                }
+            ]
+        }
+    }
 }
 
 </script>
 
 
 <template>
-
-    <!-- contenuto Our Works  -->
     <section>
         <div class="container">
-
-
             <div class="row">
-
-                <!-- titolo , sottotitolo e paragrafo  -->
-
                 <div class="col-6 offset-3 text-center section-header">
                     <h3> Our Works </h3>
                     <h2> Featured Productions </h2>
                     <p> Here's just a small sample of some of those projects that we're quite proud of. If you're looking for something specific feel free to get in contact with us. </p>
                 </div>
+            </div>
 
-                <!-- 4 cards con effetto hover inclunato  -->
-
-                <div class="offset-1 col-10 offset-1 d-flex flex-wrap">
-
-                    <div class="card_featured_productions">
-                        <img src="/work1.png" alt="">
+            <ul class="row">
+                <li v-for="work in featuredWorks" class="col-6">
+                    <div class="card-featured-productions">
+                        <img :src="work.image" alt="">
                         <div class="overlay-hover">
-                            <a class="play-circle">
+                            <a :href="work.link" class="play-circle">
                                 <i class="fa-solid fa-play"></i>
                             </a>
                         </div>
                     </div>
+                </li>
+            </ul>
 
-                    <div class="card_featured_productions">
-                        <img src="/work2.png" alt="">
-                        <div class="overlay-hover">
-                            <a class="play-circle">
-                                <i class="fa-solid fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card_featured_productions">
-                        <img src="/work3.png" alt="">
-                        <div class="overlay-hover">
-                            <a class="play-circle">
-                                <i class="fa-solid fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card_featured_productions">
-                        <img src="/work4.png" alt="">
-                        <div class="overlay-hover">
-                            <a class="play-circle">
-                                <i class="fa-solid fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- bottone See Our Work  -->
-                <div class="col-12 d-flex justify-content-center jus text-center">
-                    <a class="button alternative">
-                        See Our Work
-                    </a>
-                </div>
+            <!-- bottone See Our Work  -->
+            <div class="col-12 d-flex justify-content-center jus text-center">
+                <a class="button alternative">
+                    See Our Work
+                </a>
             </div>
         </div>
     </section>
@@ -87,8 +74,8 @@ h3 {
     color: $blue;
 }
 
-.card_featured_productions {
-    width: calc((100% / 2) - 20px);
+.card-featured-productions {
+    width: 100%;
     border-radius: $rad-m;
     margin: 10px;
     transition: all $trns-stnd linear;
