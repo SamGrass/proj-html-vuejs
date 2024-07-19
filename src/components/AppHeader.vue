@@ -200,5 +200,13 @@ li {
         display: none;
     }
 
+    .planet.starlight {
+        display: none;
+    }
+
+    .planet.starleft {
+        display: none;
+    }
+
 }
 </style>
