@@ -56,7 +56,6 @@ export default {
                     </li>
                 </ul>
             </div>
-            <a  class="button desktop_navbar" href="#">Get a Quote</a>
 
                    <!-- HAMBURGER MENU  -->
 
