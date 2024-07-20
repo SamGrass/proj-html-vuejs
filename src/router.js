@@ -12,20 +12,28 @@ const router = createRouter({
         {
             path: '/',
             name: 'Home',
-            component: AppHome
+            component: AppHome,
+            meta: {
+                jumboBackground: 'banner-bg.png'
+            }
         },
         {
             path: '/about',
             name: 'About Us',
-            component: AppAboutUs
+            component: AppAboutUs,
+            meta: {
+                jumboBackground: 'banner-bg.png',
+                jumboMascotte: 'rocket-banner.png'
+            }
         },
         {
             path: '/contact',
-            name: 'Contact Us',
-            component: AppContact
-        },
-
-
+            name: 'Contact',
+            component: AppContact,
+            meta: {
+                jumboBackground: 'banner-bg3.png'
+            }
+        }
     ]
 });
 export { router };

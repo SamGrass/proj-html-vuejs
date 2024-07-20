@@ -59,10 +59,10 @@ export default {
                                 <a href="/">Home</a>
                             </li>
                             <li>
-                                <a href="#!">About Us</a>
+                                <a href="/about">About Us</a>
                             </li>
                             <li>
-                                <a href="#!">Contact Us</a>
+                                <a href="/contact">Contact Us</a>
                             </li>
                         </ul>
                     </nav>
@@ -115,6 +115,7 @@ export default {
             position: absolute;
             top: 10%;
             right: 1%;
+            color: black;
         }
     }
 }

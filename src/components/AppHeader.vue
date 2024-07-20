@@ -1,31 +1,28 @@
 <script>
-import { router } from '../router.js'
+import { router } from '../router.js';
+import { useRoute } from 'vue-router';
+import JumbotronGeneric from './JumbotronGeneric.vue';
 import JumbotronHome from './JumbotronHome.vue';
-import JumbotronAboutUs from './JumbotronAboutUs.vue';
-import JumbotronContacts from './JumbotronContacts.vue';
-
-
-
 
 export default {
     name: 'AppHeader',
+
     components: {
         JumbotronHome,
-        JumbotronAboutUs,
-        JumbotronContacts
+        JumbotronGeneric
     },
+
     data() {
         return {
-            router,
-            activeIndex: 0
-        }
-    },
-    methods: {
-        changeActiveIndex(index) {
-            this.activeIndex = index;
+            router
         }
     },
 
+    computed: {
+        getCurrentRoute() {
+            return useRoute();
+        }
+    }
 }
 </script>
 
@@ -84,11 +81,10 @@ export default {
 
 
 
-        <JumbotronHome v-if="activeIndex === 0" />
-        <JumbotronAboutUs v-else-if="activeIndex === 1" />
-        <JumbotronContacts v-else-if="activeIndex === 2" />
+        <JumbotronHome v-if="getCurrentRoute.path === '/'" />
+        <JumbotronGeneric v-else :nameOfPage="getCurrentRoute.name" :mascotte="getCurrentRoute.meta.jumboMascotte" />
     </header>
-    <div class="mb-10" v-if="activeIndex === 0">
+    <div class="mb-10" v-if="getCurrentRoute.path === '/'">
 
     </div>
 </template>
@@ -103,9 +99,9 @@ export default {
 // regole generali header 
 header {
     width: 100%;
-    background: url(/banner-bg.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: $white;
     position: relative;
     z-index: 900;
     @include bottom-shape('/bottom-shape.png');
