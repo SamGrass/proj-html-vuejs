@@ -73,16 +73,21 @@ section.jumbotron-section {
   color: $white;
   padding: 0;
 
-  h1 {
-    font-size: 3.5rem;
-  }
+  .section-header {
+    max-width: 100%;
+    width: 100%;
 
-  h3 {
-    color: $orange;
-  }
+    h1 {
+      font-size: 4.75rem;
+    }
 
-  p {
-    font-size: 1.5rem;
+    h3 {
+      color: $orange;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
 

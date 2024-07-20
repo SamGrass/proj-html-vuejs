@@ -28,55 +28,74 @@ export default {
 
 <template>
 
-    <header>
+    <header :style="{ 'background-image': `url(/${getCurrentRoute.meta.jumboBackground})` }">
         <!-- pianeti in absolute  -->
         <div>
-            <img class="planet uno" src="/globe1.png" alt="plantet">
-            <img class="planet due" src="/globe2.png" alt="plantet">
-            <img class="planet tre" src="/globe3.png" alt="plantet">
-            <img class="planet ufo" src="/light.png" alt="plantet">
-            <img class="planet starleft" src="/dots-left.png" alt="plantet">
-            <img class="planet starlight" src="/dots-right.png" alt="plantet">
+            <div class="background-element planet-left">
+                <img src="/globe1.png" alt="Plantet">
+            </div>
+
+            <div class="background-element planet-two">
+                <img src="/globe2.png" alt="Plantet">
+            </div>
+
+            <div class="background-element planet-three">
+                <img src="/globe3.png" alt="Plantet">
+            </div>
+
+            <div class="background-element ufo">
+                <img src="/light.png" alt="UFO">
+            </div>
+
+            <div class="background-element starlight-left">
+                <img src="/dots-left.png" alt="Starlight">
+            </div>
+
+            <div class="background-element starlight-right">
+                <img src="/dots-right.png" alt="Starlight">
+            </div>
         </div>
 
         <!-- navbar con logo , link per le pagine e bottone Get a Quote  -->
-        <nav class="justify-content-md-between">
-            <img src="/logo.png" alt="">
-            <div class="desktop_navbar">
+        <div class="container">
+            <nav>
+                <img src="/logo.png" alt="">
+                <div class="desktop_navbar">
 
-                <ul class="ms_link-router">
-                    <li v-for="(item, index) in router.getRoutes()" :key="index">
-                        <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
-                    </li>
-                    <li>
-                        <a class="button" href="#">Get a Quote</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- HAMBURGER MENU  -->
-
-            <div class="hamburger-menu">
-                <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                    <div>
-                        <ul>
-                            <li v-for="(item, index) in router.getRoutes()" :key="index">
-                                <router-link @click="changeActiveIndex(index)" :to="{ name: item.name }">{{ item.name }}</router-link>
-                            </li>
-                            <li><a class="button" href="#">Get a Quote</a></li>
-                        </ul>
-                    </div>
+                    <ul class="ms_link-router">
+                        <li v-for="(item, index) in router.getRoutes()" :key="index">
+                            <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+                        </li>
+                        <li>
+                            <a class="button" href="#">Get a Quote</a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="navbar navbar-dark ">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><i class="fa-solid fa-bars"></i></span>
-                        </button>
+                <!-- HAMBURGER MENU  -->
+
+                <div class="hamburger-menu">
+                    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+                        <div>
+                            <ul>
+                                <li v-for="(item, index) in router.getRoutes()" :key="index">
+                                    <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+                                </li>
+                                <li><a class="button" href="#">Get a Quote</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="navbar navbar-dark ">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span><i class="fa-solid fa-bars"></i></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 
 
 
@@ -117,18 +136,13 @@ header {
 
 // regole navbar
 nav {
-    padding-top: 2rem;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
+    @include flex-center(vertical);
     justify-content: space-between;
-    align-items: center;
 }
 
 ul {
-    display: flex;
+    @include flex-center(vertical);
     padding-top: 1rem;
-    align-items: center;
 }
 
 li {
@@ -146,44 +160,48 @@ li {
 
 // regole dei pianeti in background 
 
-.planet {
+.background-element {
     position: absolute;
     z-index: -1;
-}
 
-
-.planet.uno {
-    top: 10%;
-    left: 10%;
+    &.planet-left {
+        top: 12%;
+        left: 10%;
+        width: 8rem;
     width: 5rem;
-}
+    }
 
-.planet.due {
-    top: 18%;
-    right: 30%;
-    width: 5rem;
-}
+    &.planet-two {
+        top: 18%;
+        right: 30%;
+        width: 6rem;
+    }
 
-.planet.tre {
-    top: -18%;
-    left: 33%;
-    width: 18rem;
-}
+    &.planet-three {
+        top: -18%;
+        left: 33%;
+        width: 18rem;
+    }
 
-.planet.ufo {
-    right: 9%;
-    top: 11%;
-}
+    &.ufo {
+        right: 9%;
+        top: 11%;
+    }
 
-.planet.starleft {
-    top: 5%;
-    left: 1%;
-}
+    &.starlight-left {
+        top: 5%;
+        left: 1%;
+    }
 
-.planet.starlight {
-    top: 8%;
-    right: 1%;
-    z-index: -2;
+    &.starlight-right {
+        top: 8%;
+        right: 1%;
+        z-index: -2;
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 
@@ -191,10 +209,6 @@ li {
 
 
 @media screen and (max-width: 991px) {
-    nav {
-        width: 70%;
-    }
-
     .desktop_navbar {
         display: none;
     }
@@ -203,15 +217,15 @@ li {
         display: flex;
     }
 
-    .planet.tre {
+    .planet-three {
         display: none;
     }
 
-    .planet.starlight {
+    .starlight-left {
         display: none;
     }
 
-    .planet.starleft {
+    .starlight-right {
         display: none;
     }
 

@@ -67,7 +67,7 @@ export default {
 
 
         <div class="smart-mascotte-two background-element">
-            <img src="/public/smarttwo.png" alt="">
+            <img src="/smarttwo.png" alt="">
         </div>
 
         <div class="rocket background-element">

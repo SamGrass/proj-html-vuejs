@@ -21,8 +21,8 @@ export default {
                     </div>
                 </div>
 
-                <div v-if="mascotte" class="d-none d-lg-block col-lg-5 col-xxl-6">
-                    <div class="background-image">
+                <div class="d-none d-lg-block col-lg-5 col-xxl-6 height-giver">
+                    <div v-if="mascotte" class="background-image jumbotron-mascotte">
                         <img :src="'/' + mascotte" alt="Jumbotron Mascotte">
                     </div>
                 </div>
@@ -38,14 +38,38 @@ export default {
 
     .section-header {
         text-align: left;
+        margin-bottom: 0;
     }
 
-    .background-image {
-        width: 100%;
+    .height-giver {
+        aspect-ratio: 14 / 7;
 
-        img {
+        .jumbotron-mascotte {
             width: 100%;
+            height: 100%;
+            animation: jumboscotte 3s linear infinite;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: right;
+            }
         }
+    }
+}
+
+@keyframes jumboscotte {
+    0% {
+        transform: translateY(.5rem);
+    }
+
+    50% {
+        transform: translateX(.5rem);
+    }
+
+    100% {
+        transform: translateY(.5rem);
     }
 }
 </style>

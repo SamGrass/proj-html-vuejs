@@ -1,7 +1,6 @@
 <script>
 export default {
     name: 'JumbotronHome',
-
 }
 </script>
 
@@ -45,6 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 .container {
     margin-top: 50px;
@@ -69,15 +69,11 @@ export default {
 
 .button_container {
     z-index: 4;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    width: 50%;
-    margin: 0 auto;
 }
 
 .button {
     box-shadow: 0 .5rem 1rem #6d648b9c;
+    margin: 0 1.5rem;
 }
 
 // img astronauti in absolut 
