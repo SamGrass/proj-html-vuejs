@@ -120,6 +120,7 @@ header {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     color: $white;
     position: relative;
     z-index: 900;
@@ -168,13 +169,14 @@ li {
         top: 12%;
         left: 10%;
         width: 8rem;
-    width: 5rem;
+        animation: planet 3s linear infinite;
     }
 
     &.planet-two {
         top: 18%;
         right: 30%;
         width: 6rem;
+        animation: planet 6s reverse linear infinite;
     }
 
     &.planet-three {
@@ -186,6 +188,7 @@ li {
     &.ufo {
         right: 9%;
         top: 11%;
+        animation: ufo 1s alternate linear infinite;
     }
 
     &.starlight-left {
@@ -229,5 +232,17 @@ li {
         display: none;
     }
 
+}
+
+@keyframes planet {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ufo {
+    0% {
+        transform: rotate(10deg);
+    }
 }
 </style>
