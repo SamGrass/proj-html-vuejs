@@ -47,7 +47,7 @@ export default {
                 {
                     label: 'PHONE',
                     isTextArea: false,
-                    patternRegEx: /^(*\d){10}*$/,
+                    patternRegEx: /^( *\d){10} *$/,
                     placeholder: 'What\'s your phone number?',
                     value: '',
                     isInvalid: false,
