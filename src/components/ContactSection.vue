@@ -47,7 +47,7 @@ export default {
                 {
                     label: 'PHONE',
                     isTextArea: false,
-                    patternRegEx: /^[0-9]{10}$/,
+                    patternRegEx: /^(*\d){10}*$/,
                     placeholder: 'What\'s your phone number?',
                     value: '',
                     isInvalid: false,
@@ -56,7 +56,7 @@ export default {
                 {
                     label: 'LEAVE A MESSAGE',
                     isTextArea: true,
-                    patternRegEx: /^[A-z]{10,}/,
+                    patternRegEx: /\s*(?:[\w\.]\s*){10,}$/,
                     placeholder: 'Please type your message here...',
                     value: '',
                     isInvalid: false,
