@@ -62,7 +62,8 @@ export default {
         gap: 15px;
         justify-content: center;
         animation: scroll 10s linear infinite;
-        width: calc(215px * 12);
+        width: calc(215px * 12); 
+        padding: 2px 0;
     }
 
 }

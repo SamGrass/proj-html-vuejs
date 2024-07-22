@@ -73,6 +73,7 @@ section {
         justify-content: center;
         animation: scroll 20s linear infinite;
         width: calc(315px * 8);
+        padding: 2px 0;
     }
 
 }
