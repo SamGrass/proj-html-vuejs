@@ -30,12 +30,12 @@ export default {
             <div class="row justify-content-center">
                 <div class="col-xl-9">
                     <!-- Video -->
-                    <div class="videointroduction">
+                    <a href="https://youtu.be/ZZ5LpwO-An4?si=ys754HL7stse_EH-" target="_blank" class="videointroduction">
                         <img src="/middle.png" alt="">
                         <div class="buttonplayer">
                             <i class="fa-solid fa-play"></i>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
