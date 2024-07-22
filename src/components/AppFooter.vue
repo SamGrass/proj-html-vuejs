@@ -55,14 +55,8 @@ export default {
                     </div>
                     <nav class="col">
                         <ul class="d-flex justify-content-end ms_links ms_link-router">
-                            <li>
-                                <a href="/">Home</a>
-                            </li>
-                            <li>
-                                <a href="/about">About Us</a>
-                            </li>
-                            <li>
-                                <a href="/contact">Contact Us</a>
+                            <li v-for="(item, index) in router.getRoutes()" :key="index">
+                                <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
                             </li>
                         </ul>
                     </nav>
